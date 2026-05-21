@@ -245,13 +245,13 @@
   height: auto;
   image-rendering: auto;
   filter: drop-shadow(0 0 12px #0ff) drop-shadow(0 0 22px #00f);
-  animation: rotomReveal 0.25s ease-out;
+  animation: rotomReveal 0.1s ease-out;
   margin: 0 0 0 100px;
 }
 
 .electricity {
-  animation: electricity 0.2s infinite;
-  animation-delay: 0.5s;
+  animation: electricity 0.01s infinite;
+  animation-delay: 0.2s;
 }
 
 .rotate {

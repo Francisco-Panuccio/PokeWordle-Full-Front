@@ -47,6 +47,19 @@ export const championsImages: string[] = [
 //Gifs
 export const rotomGif: string = "gifs/rotom.gif";
 
+export const unownSecretImages: string[] = [
+    "images/cracked.png",
+    "images/unown/w.png",
+    "images/unown/e.png",
+    "images/unown/a.png",
+    "images/unown/t.png",
+    "images/unown/c.png",
+    "images/unown/h.png",
+    "images/unown/y.png",
+    "images/unown/o.png",
+    "images/unown/u.png",
+];
+
 //Sounds
 export const audiosPokedex: string[] = [
     "sounds/btn_green_one.mp3",
@@ -55,6 +68,7 @@ export const audiosPokedex: string[] = [
 ];
 
 export const tournamentBackground: string[] = ["sounds/tournament.mp3"];
+export const brokenGlassAudio: string[] = ["sounds/broken_glass.mp3"];
 
 //Wordle
 export const wordLength: number = 7;

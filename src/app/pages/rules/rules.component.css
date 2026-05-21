@@ -77,10 +77,111 @@
   margin: 10px 0 20px 0 !important;
 }
 
+.div_unown_secret {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: default;
+  user-select: none;
+}
+
+.div_unown_darkness {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--primary-color);
+  animation: unownDarkness 2.5s ease-in forwards;
+  pointer-events: none;
+}
+
+.img_cracked_screen {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.div_unown_message {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: min(760px, 90vw);
+  padding: 20px;
+  animation: unownMessageAppear 0.8s ease-out both;
+  pointer-events: none;
+}
+
+.div_unown_word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.img_unown_letter {
+  width: clamp(34px, 10vw, 130px);
+  height: auto;
+  filter: drop-shadow(0 0 8px var(--primary-color));
+  animation: unownFloat 2.4s ease-in-out infinite;
+}
+
+@keyframes unownMessageAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes unownDarkness {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.88;
+  }
+}
+
+@keyframes unownFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 /* Media Queries */
 /* Pantallas Menores a 450px */
 @media (max-width: 450px) {
   .div_rules {
     width: 270px;
+  }
+
+  .div_unown_message {
+    gap: 4px;
+    padding: 10px;
+  }
+
+  .div_unown_word {
+    gap: 4px;
   }
 }

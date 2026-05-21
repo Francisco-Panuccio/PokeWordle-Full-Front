@@ -33,3 +33,23 @@
     <p class="p_end_rules">- All regions are replayable, allowing you to farm points and climb your Score.</p>
 </div>
 </div>
+
+@if(secretActive) {
+    <div class="div_unown_secret">
+        @if(showUnownMessage) {
+            <div class="div_unown_darkness"></div>
+        }
+        <img [src]="crackedImage" alt="" class="img_cracked_screen">
+        @if(showUnownMessage) {
+            <div class="div_unown_message" aria-hidden="true">
+                @for(word of unownMessage; track word) {
+                    <div class="div_unown_word">
+                        @for(letter of word.split(''); track $index) {
+                            <img [src]="'images/unown/' + letter + '.png'" alt="" class="img_unown_letter">
+                        }
+                    </div>
+                    }
+            </div>
+        }
+    </div>
+}
