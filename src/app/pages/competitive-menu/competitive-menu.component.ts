@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnDestroy, Renderer2, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from '../loading/loading.component';
@@ -16,10 +16,11 @@ import { ProgressService } from '../../services/progress.service';
   templateUrl: './competitive-menu.component.html',
   styleUrl: './competitive-menu.component.css'
 })
-export class CompetitiveMenuComponent {
+export class CompetitiveMenuComponent implements OnDestroy {
   private progress = inject(ProgressService);
   private router = inject(Router);
   private preload = inject(PreloadService);
+  private renderer = inject(Renderer2);
 
   regions: string[] = [];
   loading: boolean = true;
@@ -31,11 +32,16 @@ export class CompetitiveMenuComponent {
   inputCode: string = "";
   currentCode: string = "";
   statusMessage: string = "";
-  showLoadCode: boolean = true;
+  showLoadCode: boolean = false;
 
   async ngOnInit() {
+    this.renderer.addClass(document.body, 'top-aligned-page');
     this.refreshState();
     this.loading = false;
+  }
+
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'top-aligned-page');
   }
 
   private async preloadRegionsIfReady() {
@@ -97,6 +103,21 @@ export class CompetitiveMenuComponent {
     } catch (error: any) {
       this.statusMessage = 'Invalid code. Please check and try again.';
     }
+  }
+
+  toggleLoadCode() {
+    this.showLoadCode = !this.showLoadCode;
+  }
+
+  resetProgress() {
+    const confirmed = window.confirm('Reset all progress and username?');
+    if (!confirmed) return;
+
+    this.progress.reset();
+    this.inputCode = '';
+    this.statusMessage = 'Progress reset.';
+    this.showLoadCode = false;
+    this.refreshState();
   }
 
   goToRegionalWordle(region: string) {

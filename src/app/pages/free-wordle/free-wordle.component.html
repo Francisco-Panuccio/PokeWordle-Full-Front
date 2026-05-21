@@ -16,6 +16,12 @@
             <button (click)="resetGame()" class="btn_replay">Play Again</button>
         </div>
     } @else {
+        <div class="div_title_rules" (click)="revealRules()">
+            <h2 class="h2_rules">Rules</h2>
+        </div>
+        
+        @if(showRules) { <app-rules/> }
+
         <div class="div_main_wordle">
             <div class="div_home_wordle">
                 <button class="btn_home_wordle" (click)="goToHome()">Back</button>
@@ -50,15 +56,9 @@
                     </div>
                 }
                 @if(invalidPokemon) {
-                    <span class="span_error_wordle">This is not a valid Pokémon</span>
+                    <span class="span_error_wordle_free">This is not a valid Pokémon</span>
                 }
             </div>
         </div>
-
-        <div class="div_title_rules" (click)="revealRules()">
-            <h2 class="h2_rules">Rules</h2>
-        </div>
-        
-        @if(showRules) { <app-rules/> }
     }
 }

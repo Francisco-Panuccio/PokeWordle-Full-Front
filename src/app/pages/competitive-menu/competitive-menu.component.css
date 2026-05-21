@@ -1,5 +1,5 @@
 .div_main_logged {
-  margin: 50px auto 40px auto;
+  padding: 10px 0 20px 0;
 }
 
 .h1_logged {
@@ -26,11 +26,20 @@
   align-items: center;
   width: 100%;
   border-bottom: 10px double var(--primary-color);
-  padding: 5px 0 15px 0;
+  padding: 15px 0;
 }
 
 .division_one {
   padding: 0 0 20px 0 !important;
+}
+
+.division_one.only_back {
+  justify-content: center;
+  color: var(--border-text-color);
+}
+
+.div_username {
+  padding: 5px 0 15px 0;
 }
 
 .btn_leaderboard,
@@ -56,6 +65,7 @@
 }
 
 .division_two {
+  height: 50px !important;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border-top: 10px double var(--secondary-color);
@@ -113,7 +123,7 @@
 }
 
 .div_section:last-child:not(:only-child) {
-  margin: 10px 0 -10px 0;
+  margin: 10px 0;
 }
 
 .div_import {
@@ -123,7 +133,33 @@
   justify-content: center;
   align-items: center;
   height: fit-content;
-  margin: 10px 0 -25px 0;
+  margin: 12px 0 0 0;
+}
+
+.div_import_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+  margin: 0 0 8px 0;
+}
+
+.btn_import_toggle,
+.btn_reset_progress {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'PixelCraft Bold', sans-serif;
+  font-size: 16px;
+  background: none;
+  color: var(--masterball);
+  text-decoration: 3px underline;
+}
+
+.btn_reset_progress {
+  color: var(--pokedex-decoration-color);
 }
 
 .div_import_section {
@@ -155,12 +191,61 @@
       text-decoration: 3px underline;
     }
 
-    .p_status {
-      margin: 0px 0 30px 0;
-      font-family: 'PixelCraft Bold', sans-serif;
-      font-size: 14px;
-      color: var(--masterball-side);
-    }
+}
+
+.p_status {
+  margin: 0 0 12px 0;
+  font-family: 'PixelCraft Bold', sans-serif;
+  font-size: 14px;
+  color: var(--masterball-side);
+}
+
+.div_username_input,
+.div_username {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  input {
+    font-size: 14px;
+    font-family: 'PixelCraft Bold', sans-serif;
+    padding: 5px 10px;
+    border-radius: 40px;
+    width: 150px;
+    text-align: center;
+    border: 3px solid var(--secondary-color);
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 20px;
+  }
+
+  input:focus,
+  input:focus-visible {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: none;
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  button {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 14px;
+    font-family: 'PixelCraft Bold', sans-serif;
+    background: none;
+    color: var(--secondary-color);
+    translate: 0 -2px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 /* Media Queries */

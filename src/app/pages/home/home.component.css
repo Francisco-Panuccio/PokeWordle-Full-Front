@@ -1,5 +1,5 @@
 .div_border_main {
-  margin: auto;
+  margin: 0 auto;
   background-color: var(--primary-color);
   width: 1010px;
   border-radius: 100px;
@@ -9,7 +9,7 @@
 .div_main {
   display: flex;
   place-content: center;
-  margin: 140px auto 0 auto;
+  margin: 0 auto;
   border-radius: 100px;
   width: fit-content;
   background-color: var(--secondary-color);
@@ -265,11 +265,10 @@
 /* Pantallas Menores a 1050px */
 @media (max-width: 1050px) {
   .div_border_main {
-    width: 90%;
+    width: 909px;
   }
 
   .div_main {
-    margin: 105px auto 0 auto;
     width: 99%;
   }
 
@@ -354,6 +353,10 @@
 
 /* Pantallas Menores a 950px */
 @media (max-width: 950px) {
+  .div_border_main {
+    width: 808px;
+  }
+
   .div_border_left_band {
     width: 100%;
   }
@@ -379,17 +382,10 @@
 
   .div_screen {
     width: 150%;
-    height: 370px;
-    margin: 130px -11px 0 -12px;
   }
 
   .div_screen_int {
     width: 85%;
-    height: 300px;
-  }
-
-  .div_opts {
-    padding: 5px 15px 10px 15px;
   }
 
   .div_right_band {
@@ -419,16 +415,22 @@
   }
 }
 
+/* Pantallas Menores a 850px */
+@media (max-width: 850px) {
+  .div_border_main {
+    width: 707px;
+  }
+}
+
 /* Pantallas Menores a 750px */
 @media (max-width: 750px) {
   .div_border_main {
+    width: 606px;
     height: 500px;
   }
 
   .div_main {
-    margin: 160px auto 0 auto;
     width: 98%;
-    height: 495px;
   }
 
   .div_border_container {
@@ -503,8 +505,37 @@
   }
 }
 
-/* Pantallas Menores a 400px */
-@media (max-width: 400px) {
+/* Pantallas Menores a 650px */
+@media (max-width: 650px) {
+  .div_border_main {
+    width: 505px;
+  }
+}
+
+/* Pantallas Menores a 550px */
+@media (max-width: 550px) {
+  .div_border_main {
+    width: 404px;
+  }
+}
+
+/* Pantallas Menores a 450px */
+@media (max-width: 450px) {
+  .div_border_main {
+    width: 303px;
+  }
+
+  .div_opts {
+    padding: 5px 10px 10px 10px;
+  }
+}
+
+/* Pantallas Menores a 350px */
+@media (max-width: 350px) {
+  .div_border_main {
+    width: 252.5px;
+  }
+
   .div_decorations {
     gap: 20px;
   }
@@ -515,14 +546,6 @@
 
   .div_screen {
     width: 80%;
-  }
-
-  .div_screen_int {
-    width: 90%;
-  }
-
-  .div_opts {
-    padding: 5px 10px 10px 10px;
   }
 
   .p_opt {

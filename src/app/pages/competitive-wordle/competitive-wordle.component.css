@@ -1,14 +1,10 @@
-/*Logged In - Regional*/
-.div_main_regional {
-  margin: 50px auto 30px auto;
-}
-
+/*Regional*/
 .h1_regional {
-  font-size: 70px;
+  font-size: 60px;
   border-bottom: 10px double var(--primary-color);
   font-family: 'PixelCraft Bold', sans-serif;
   margin: -35px 0 35px 0;
-  padding: 0 73px 10px 73px;
+  padding: 0 73px 5px 73px;
 }
 
 .div_game_over {
@@ -62,20 +58,10 @@ br {
 }
 
 /* Media Queries */
-/* Pantallas Menores a 650px */
-@media (max-width: 650px) {
-  .h1_regional {
-    font-size: 50px;
-    margin: -20px 0 35px 0;
-    padding: 0 129px 10px 129px;
-  }
-}
-
-/* Pantallas Menores a 600px */
-@media (max-width: 600px) {
+/* Pantallas Menores a 620px */
+@media (max-width: 620px) {
   .div_main_regional {
-    padding-bottom: 30px;
-    margin-top: 120px;
+    padding: 10px 0 30px 0;
   }
 
   .h1_regional {
@@ -122,17 +108,20 @@ br {
   }
 }
 
-/* Pantallas Menores a 460px */
-@media (max-width: 460px) {
+/* Pantallas Menores a 520px */
+@media (max-width: 520px) {
   .div_main_regional {
-    padding-bottom: 25px;
-    margin-top: 120px;
+    padding: 10px 0 20px 0;
+  }
+
+  .span_error_wordle {
+    margin: 0 0 -10px 0;
   }
 
   .h1_regional {
     font-size: 30px;
     margin: -5px 0 30px 0;
-    padding: 0 55px 10px 55px;
+    padding: 0 50px 10px 50px;
   }
 }
 

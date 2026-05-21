@@ -4,7 +4,11 @@ const AUDIO_CACHE = new Map<string, HTMLAudioElement>();
 
 function toAbs(url: string): string {
   if (!url) return "";
-  return url.startsWith("/") ? url : `/${url.replace(/^\/+/, "")}`;
+  try {
+    return new URL(url, document.baseURI).toString();
+  } catch {
+    return url;
+  }
 }
 
 //Images

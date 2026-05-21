@@ -14,6 +14,11 @@
             <button class="btn_replay" (click)="gameWon ? nextRound() : goToMenu()">{{gameWon ? "Keep Going" : "Try Again"}}</button>
         </div>
     } @else {
+        <div class="div_title_rules div_title_rules_logged" (click)="revealRules()">
+            <h2 class="h2_rules">Rules</h2>
+        </div>
+        @if(showRules) { <app-rules /> }
+
         <div class="div_main_regional">
             <div class="div_back">
                 <button class="btn_back" (click)="goToMenu()">Back</button>
@@ -45,10 +50,5 @@
                 }
             </div>
         </div>
-
-        <div class="div_title_rules" (click)="revealRules()">
-            <h2 class="h2_rules">Rules</h2>
-        </div>
-        @if(showRules) { <app-rules /> }
     }
 }
