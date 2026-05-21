@@ -1,12 +1,47 @@
+.div_rules_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+}
+
 .div_rules {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
   width: 400px;
+  max-height: min(80vh, 720px);
+  overflow-y: auto;
+  overflow-x: hidden;
   border: 5px solid var(--border-text-color);
-  border-radius: 0 0 10px 10px;
-  border-top: none;
+  border-radius: 10px;
   font-family: 'Times New Roman', Times, serif;
-  margin: -40px auto 40px auto;
+  margin: 0;
   color: var(--primary-color);
-  padding: 0;
+  padding: 0 0 10px 0;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 0 5px var(--primary-color);
+}
+
+.btn_close_rules {
+  position: sticky;
+  top: 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid var(--border-text-color);
+  padding: 8px 0 10px 0;
+  font-family: 'PixelCraft Bold', sans-serif;
+  font-size: 20px;
+  color: var(--pokedex-decoration-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .p_rules,
@@ -46,6 +81,6 @@
 /* Pantallas Menores a 450px */
 @media (max-width: 450px) {
   .div_rules {
-    width: 230px;
+    width: 270px;
   }
 }

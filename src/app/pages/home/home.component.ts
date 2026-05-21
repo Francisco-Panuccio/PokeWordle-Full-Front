@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { preloadAudiosOnce, playAudio } from '../../functions';
 import { colorOptions, audiosPokedex } from '../../constants';
 import { Router } from '@angular/router';
+import { RulesComponent } from '../rules/rules.component';
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, RulesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   audioElements: HTMLAudioElement[] = [];
   hoveredColors: string[] = [];
   electricEffect: boolean = false;
+  showRules: boolean = false;
 
   async ngOnInit() {
     this.hoveredColors = new Array(this.options.length).fill("");
@@ -61,6 +63,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   goTo(route: string) { this.router.navigate([route]); }
+
+  revealRules() { this.showRules = !this.showRules; }
 
   play(n: number) { playAudio(this.audioElements, n); }
 

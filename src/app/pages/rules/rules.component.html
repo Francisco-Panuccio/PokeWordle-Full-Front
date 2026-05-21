@@ -1,4 +1,6 @@
-<div class="div_rules">
+<div class="div_rules_overlay" (click)="close()">
+<div class="div_rules" (click)="$event.stopPropagation()">
+    <button class="btn_close_rules" type="button" (click)="close()">Close</button>
     <span class="first_span_rules">General Rules</span>
     <p class="p_rules">- Only Pokémon with 7-letter names appear in all Wordle modes.</p>
     <p class="p_rules">- All Wordle rounds allow a maximum of 6 guesses.</p>
@@ -29,4 +31,5 @@
     <p class="p_rules">- Each gym victory (Wordle round) grants up to 100 points, decreasing by 10 points per failed
         guess and 30 points if a hint is used.</p>
     <p class="p_end_rules">- All regions are replayable, allowing you to farm points and climb your Score.</p>
+</div>
 </div>

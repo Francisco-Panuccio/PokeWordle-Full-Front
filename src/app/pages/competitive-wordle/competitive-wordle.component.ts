@@ -80,7 +80,7 @@ export class CompetitiveWordleComponent implements OnInit, AfterViewInit, OnDest
       return;
     }
 
-    if (event.key === 'Control' && !this.loading && !this.showGameOver && !this.gameOver && !this.showHint) {
+    if (event.key === 'Control' && !this.loading && !this.showRules && !this.showGameOver && !this.gameOver && !this.showHint) {
       event.preventDefault();
       await this.revealHint();
     }

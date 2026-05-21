@@ -4,7 +4,19 @@
         <h2 class="h2_rules">Rules</h2>
     </div>
     
-    @if(showRules) { <app-rules/> }
+    @if(showRules) { <app-rules (closed)="showRules = false"/> }
+
+    @if(showResetConfirm) {
+        <div class="div_reset_overlay" (click)="cancelResetProgress()">
+            <div class="div_reset_modal" (click)="$event.stopPropagation()">
+                <p>Reset all progress and username?</p>
+                <div class="div_reset_actions">
+                    <button class="btn_cancel_reset" (click)="cancelResetProgress()">Cancel</button>
+                    <button class="btn_confirm_reset" (click)="confirmResetProgress()">Reset</button>
+                </div>
+            </div>
+        </div>
+    }
 
     <div class="div_main_logged">
         <div class="div_division division_one" [class.only_back]="!username">

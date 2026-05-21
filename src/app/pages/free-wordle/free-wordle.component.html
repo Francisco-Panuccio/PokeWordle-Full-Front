@@ -20,7 +20,7 @@
             <h2 class="h2_rules">Rules</h2>
         </div>
         
-        @if(showRules) { <app-rules/> }
+        @if(showRules) { <app-rules (closed)="showRules = false"/> }
 
         <div class="div_main_wordle">
             <div class="div_home_wordle">

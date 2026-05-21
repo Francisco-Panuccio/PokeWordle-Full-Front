@@ -33,6 +33,7 @@ export class CompetitiveMenuComponent implements OnDestroy {
   currentCode: string = "";
   statusMessage: string = "";
   showLoadCode: boolean = false;
+  showResetConfirm: boolean = false;
 
   async ngOnInit() {
     this.renderer.addClass(document.body, 'top-aligned-page');
@@ -110,14 +111,20 @@ export class CompetitiveMenuComponent implements OnDestroy {
   }
 
   resetProgress() {
-    const confirmed = window.confirm('Reset all progress and username?');
-    if (!confirmed) return;
+    this.showResetConfirm = true;
+  }
 
+  confirmResetProgress() {
     this.progress.reset();
     this.inputCode = '';
     this.statusMessage = 'Progress reset.';
     this.showLoadCode = false;
+    this.showResetConfirm = false;
     this.refreshState();
+  }
+
+  cancelResetProgress() {
+    this.showResetConfirm = false;
   }
 
   goToRegionalWordle(region: string) {

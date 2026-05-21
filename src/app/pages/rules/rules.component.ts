@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-rules',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './rules.component.html',
   styleUrl: './rules.component.css'
 })
-export class RulesComponent { }
+export class RulesComponent {
+  @Output() closed = new EventEmitter<void>();
+
+  @HostListener('window:keydown.escape')
+  close() {
+    this.closed.emit();
+  }
+}

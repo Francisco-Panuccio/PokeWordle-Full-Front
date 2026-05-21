@@ -25,6 +25,7 @@
                             @for(option of options; track option; let i = $index) {
                                 <p class="p_opt" (mouseover)="setRandomColor(i)" (mouseleave)="hoveredColors[i] = ''" (click)="goTo(option.route)" [style.color]="hoveredColors[i]">{{option.name}}</p>
                             }
+                            <p class="p_opt" (click)="revealRules()">Rules</p>
                         </div>
                     </div>
                 </div>
@@ -43,3 +44,4 @@
         </div>
     </div>
 </div>
+@if(showRules) { <app-rules (closed)="showRules = false"/> }

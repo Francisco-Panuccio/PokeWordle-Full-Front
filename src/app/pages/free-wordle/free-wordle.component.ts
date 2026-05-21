@@ -63,7 +63,7 @@ export class FreeWordleComponent implements OnInit, AfterViewInit {
   async onWindowKeydown(event: KeyboardEvent) {
     if (event.repeat) return;
 
-    if (event.key === 'Control' && !this.loading && !this.gameOver && !this.showHint) {
+    if (event.key === 'Control' && !this.loading && !this.showRules && !this.gameOver && !this.showHint) {
       event.preventDefault();
       await this.revealHint();
     }

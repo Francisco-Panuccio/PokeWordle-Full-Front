@@ -287,7 +287,6 @@ body.top-aligned-page {
 
 .div_title_rules:hover {
   cursor: pointer;
-  color: var(--border-text-color);
 }
 
 .h2_rules {
@@ -295,6 +294,10 @@ body.top-aligned-page {
   font-size: 20px;
   color: var(--primary-color);
   transform: translateY(-6px);
+}
+
+.div_title_rules:hover .h2_rules {
+  color: var(--border-text-color);
 }
 
 .flip {

@@ -1,1 +1,0 @@
-import{aa as o,b as a,fa as n,ga as s,ha as i,ia as c}from"./chunk-RJG3TK3M.js";var m=class t{preloadFree(){return o(n)}preloadCompetitive(r){let e=r.map(p=>s[p.toLowerCase()]).filter(Boolean);return o([...i,...e])}preloadTournament(){return o(c)}static \u0275fac=function(e){return new(e||t)};static \u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"})};export{m as a};

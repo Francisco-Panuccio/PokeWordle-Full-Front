@@ -17,7 +17,7 @@
         <div class="div_title_rules div_title_rules_logged" (click)="revealRules()">
             <h2 class="h2_rules">Rules</h2>
         </div>
-        @if(showRules) { <app-rules /> }
+        @if(showRules) { <app-rules (closed)="showRules = false" /> }
 
         <div class="div_main_regional">
             <div class="div_back">
