@@ -7,6 +7,7 @@ import { LoadingComponent } from '../loading/loading.component';
 import { PkmnTypeDirective } from '../../directives/pkmn-type.directive';
 import { AttemptCell } from '../../interfaces/attempt-cell';
 import { ValidPokemonResult } from '../../interfaces/valid-pokemon-result';
+import { ProgressService } from '../../services/progress.service';
 import * as constant from '../../constants';
 import * as funct from '../../functions';
 
@@ -20,6 +21,7 @@ import * as funct from '../../functions';
 export class TournamentWordleComponent
   implements OnInit, AfterViewInit, OnDestroy {
   private pkService = inject(PokeApiService);
+  private progress = inject(ProgressService);
   private router = inject(Router);
   private renderer = inject(Renderer2);
 
@@ -110,6 +112,16 @@ export class TournamentWordleComponent
       this.bgAudio.muted = false;
       if (this.bgAudio.paused) this.bgAudio.play().catch(() => { });
     } catch { }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  async onWindowKeydown(event: KeyboardEvent) {
+    if (event.repeat) return;
+
+    if (event.key === 'Control' && !this.loading && this.showWordle && !this.showTransition && !this.gameOver && !this.showHint) {
+      event.preventDefault();
+      await this.revealHint();
+    }
   }
 
   private async startChampionRound(name: string) {
@@ -243,6 +255,7 @@ export class TournamentWordleComponent
     const finished = this.currentChampionIndex >= this.championsOrder.length;
 
     if (finished) {
+      this.progress.setCertificate(true);
       this.gameWon = true;
       this.gameOver = true;
       this.showGameOver = true;

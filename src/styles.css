@@ -74,6 +74,7 @@ body.top-aligned-page {
 /*Wordle*/
 .div_main_wordle,
 .div_main_regional,
+.div_main_regional_tournament,
 .div_main_logged,
 .div_game_over,
 .div_rules {
@@ -98,7 +99,8 @@ body.top-aligned-page {
   margin: 0 auto 20px auto;
 }
 
-.div_main_regional {
+.div_main_regional,
+.div_main_regional_tournament {
   padding: 10px 0 40px 0;
 }
 

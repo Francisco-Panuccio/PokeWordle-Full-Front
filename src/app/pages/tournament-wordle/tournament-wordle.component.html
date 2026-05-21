@@ -18,7 +18,7 @@
     } @else {
         @if(showGameOver) {
             <div class="div_game_over">
-                <p [class]="gameWon ? 'p_victory' : 'p_defeat'">{{ gameWon ? "Now you are the best, your name will appear in gold on the leaderboard for everyone to see" : "Patethic..." }}</p>
+                <p [class]="gameWon ? 'p_victory' : 'p_defeat'">{{ gameWon ? "Now you are the best, your name and score will appear in gold on the menu" : "Patethic..." }}</p>
                 
                 <img [hidden]="!(gameOver && gameWon)" src="images/victory.jpg" alt="pikachu_victory" class="img_victory">
                 <img [hidden]="!(gameOver && !gameWon)" [src]="defeatImage" [alt]="defeatImage" class="img_defeat">
@@ -27,7 +27,7 @@
             </div>
         } @else {
             @if(showWordle) {
-                <div class="div_main_regional">
+                <div class="div_main_regional_tournament">
                     <div class="div_back">
                         <button class="btn_back" (click)="goBack()">Back</button>
                     </div>

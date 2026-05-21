@@ -9,8 +9,12 @@ export class CertificateDirective implements OnChanges {
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['appCertificate'] && this.appCertificate) {
-      this.renderer.addClass(this.el.nativeElement, "gold-text");
+    if (changes['appCertificate']) {
+      if (this.appCertificate) {
+        this.renderer.addClass(this.el.nativeElement, "gold-text");
+      } else {
+        this.renderer.removeClass(this.el.nativeElement, "gold-text");
+      }
     }
   }
 }

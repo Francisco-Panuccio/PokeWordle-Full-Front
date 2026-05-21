@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, inject, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PokeApiService } from '../../services/poke-api.service';
@@ -57,6 +57,16 @@ export class FreeWordleComponent implements OnInit, AfterViewInit {
     this.letterInputs.changes.subscribe(() => {
       if (this.letterInputs.length) this.focusInput(0, 0);
     });
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  async onWindowKeydown(event: KeyboardEvent) {
+    if (event.repeat) return;
+
+    if (event.key === 'Control' && !this.loading && !this.gameOver && !this.showHint) {
+      event.preventDefault();
+      await this.revealHint();
+    }
   }
 
   private focusInput(row: number, col: number) {

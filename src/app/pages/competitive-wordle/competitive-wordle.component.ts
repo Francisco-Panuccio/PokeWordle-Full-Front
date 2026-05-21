@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, OnDestroy, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { AttemptCell } from '../../interfaces/attempt-cell';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -68,6 +68,22 @@ export class CompetitiveWordleComponent implements OnInit, AfterViewInit, OnDest
 
   ngOnDestroy() {
     this.sub?.unsubscribe();
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  async onWindowKeydown(event: KeyboardEvent) {
+    if (event.repeat) return;
+
+    if (event.key === 'Enter' && this.showGameOver && this.gameWon) {
+      event.preventDefault();
+      await this.nextRound();
+      return;
+    }
+
+    if (event.key === 'Control' && !this.loading && !this.showGameOver && !this.gameOver && !this.showHint) {
+      event.preventDefault();
+      await this.revealHint();
+    }
   }
 
   private async startRegionalRound(): Promise<void> {

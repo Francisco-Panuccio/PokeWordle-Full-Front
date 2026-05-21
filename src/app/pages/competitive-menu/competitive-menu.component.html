@@ -11,7 +11,7 @@
             @if(username) {
                 <button class="btn_leaderboard" (click)="copyCode()">Save Progress</button>
             }
-            <button class="btn_logout" (click)="goBack()">Back</button>
+            <button class="btn_logout" [class.only_back]="!username" (click)="goBack()">Back</button>
         </div>
 
         <h1 class="h1_logged">PokeWordle</h1>
@@ -21,7 +21,10 @@
                 @if(!username) {
                     <div class="div_username_input">
                         <input [(ngModel)]="usernameInput" maxlength="12" placeholder="Username" pattern="[A-Za-z0-9ñÑ]{3,12}"/>
-                        <button (click)="saveUsername()">Let's Go!</button>
+                        <span>➜</span>
+                        <button (click)="saveUsername()">
+                            <span>Let's Go!</span>
+                        </button>
                     </div> 
                 } @else {
                     <div class="div_username">
@@ -39,7 +42,11 @@
             </div>
 
             @if(showLoadCode) {
-                <h2 class="h2_logged">{{ username ? 'Paste a code to restore progress' : 'Paste a code to load progress' }}</h2>
+                <h2 class="h2_logged">
+                    {{ username ? 'Paste a code to restore' : 'Paste a code to load' }}
+                    <br class="br_import_title">
+                    progress
+                </h2>
                 <div class="div_import_section">
                     <textarea [(ngModel)]="inputCode" spellcheck="false" placeholder="Paste your progress code"></textarea>
                     <button class="btn_load" (click)="loadCode()">Load Code</button>

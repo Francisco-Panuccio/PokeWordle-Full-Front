@@ -122,8 +122,8 @@ export class PokeApiService {
     return makeSeed(parts);
   }
 
-  private makeTargetMask(region?: string, champion?: string): number {
-    const seed = this.makeGameSeed(region, champion);
+  private makeTargetMask(region?: string, champion?: string, seedOverride?: number): number {
+    const seed = seedOverride ?? this.makeGameSeed(region, champion);
     return (seed ^ 0xa7c13f2d) & 0xff;
   }
 
@@ -157,12 +157,15 @@ export class PokeApiService {
 
     const availableEntries = regionEntries.filter((entry) => !this.activeRegionTargetHashes.has(entry.nameHash));
     const targetEntries = availableEntries.length ? availableEntries : regionEntries;
-    const selectedEntry = this.chooseSeeded(targetEntries, this.makeGameSeed(region));
+    const seed = region
+      ? this.makeGameSeed(region)
+      : makeSeed(`${Date.now()}|${Math.random()}|${GAME_SECRET}`);
+    const selectedEntry = this.chooseSeeded(targetEntries, seed);
     if (region) {
       this.activeRegionTargetHashes.add(selectedEntry.nameHash);
     }
 
-    const targetMask = this.makeTargetMask(region);
+    const targetMask = this.makeTargetMask(region, undefined, seed);
     const maskedTarget = this.xorTransform(selectedEntry.encodedName, targetMask);
     const decodedTarget = this.decodeDataName(this.xorTransform(maskedTarget, targetMask));
     this.game = {

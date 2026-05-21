@@ -1,1 +1,0 @@
-import{$ as o,b as a,ea as n,fa as s,ga as i,ha as c}from"./chunk-4N43SSOW.js";var m=class t{preloadFree(){return o(n)}preloadCompetitive(r){let e=r.map(p=>s[p.toLowerCase()]).filter(Boolean);return o([...i,...e])}preloadTournament(){return o(c)}static \u0275fac=function(e){return new(e||t)};static \u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"})};export{m as a};
