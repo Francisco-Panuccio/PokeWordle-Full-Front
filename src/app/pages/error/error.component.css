@@ -1,0 +1,77 @@
+.div_main_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  margin: 85px auto 0 auto;
+  background-image: url("/images/error.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.p_back_error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'PixelCraft Bold', sans-serif;
+  color: var(--pokeball-beam);
+}
+
+.btn_back {
+  color: var(--secondary-color);
+  text-shadow: 0px 0px 10px rgba(200, 254, 251, 1);
+}
+
+/* Media Queries */
+/* Pantallas Menores a 850px */
+@media (max-width: 850px) {
+  .div_main_error {
+    margin: 120px auto 0 auto;
+    width: 650px;
+    height: 650px;
+  }
+
+  .p_back_error {
+    font-size: 18px;
+  }
+
+  .btn_back {
+    font-size: 18px;
+  }
+}
+
+/* Pantallas Menores a 680px */
+@media (max-width: 680px) {
+  .div_main_error {
+    margin: 220px auto 0 auto;
+    width: 450px;
+    height: 450px;
+  }
+
+  .p_back_error {
+    margin: 0 0 0 10px;
+    font-size: 15px;
+  }
+
+  .btn_back {
+    font-size: 15px;
+  }
+}
+
+/* Pantallas Menores a 500px */
+@media (max-width: 500px) {
+  .div_main_error {
+    margin: 280px auto 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .p_back_error {
+    margin: 5px 0 0 0;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,237 @@
+.div_main_logged {
+  margin: 50px auto 40px auto;
+}
+
+.h1_logged {
+  font-size: 70px;
+  padding: 0 30px 10px 30px;
+  margin: -30px 0 0 0;
+  border-bottom: 10px double var(--primary-color);
+  font-family: 'PixelCraft Bold', sans-serif;
+}
+
+.h2_logged {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  color: var(--primary-color);
+  font-family: 'PixelCraft Bold', sans-serif;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.div_division {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 10px double var(--primary-color);
+  padding: 5px 0 15px 0;
+}
+
+.division_one {
+  padding: 0 0 20px 0 !important;
+}
+
+.btn_leaderboard,
+.btn_logout {
+  color: var(--border-text-color);
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'PixelCraft Bold', sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 0 20px;
+}
+
+.btn_logout {
+  color: var(--pokedex-decoration-color);
+}
+
+.div_data {
+  gap: 0;
+  padding: 0;
+  width: 100%;
+  margin: -10px 0 2px 0;
+}
+
+.division_two {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-top: 10px double var(--secondary-color);
+  border-bottom: 10px double var(--secondary-color);
+}
+
+.div_data span {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 0 20px;
+  font-family: 'PixelCraft Bold', sans-serif;
+}
+
+.div_menu {
+  gap: 20px;
+}
+
+.span_section {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
+  border-radius: 20px 20px 0 0;
+  padding: 0 5px 5px 5px;
+  width: 400px;
+  text-align: center;
+  margin: 20px 0 -30px 0;
+  font-family: 'PixelCraft Bold', sans-serif;
+  background-color: var(--primary-color);
+}
+
+.div_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 120px;
+  border: 5px solid var(--primary-color);
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  margin: 10px 0 -10px 0;
+}
+
+.div_section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 15px 15px;
+}
+
+.div_section:only-child {
+  margin: 40px 0 0 0;
+}
+
+.div_section:first-child:not(:only-child) {
+  margin: 40px 0 0 0;
+}
+
+.div_section:last-child:not(:only-child) {
+  margin: 10px 0 -10px 0;
+}
+
+.div_import {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin: 10px 0 -25px 0;
+}
+
+.div_import_section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+
+    textarea {
+      width: 250px;
+      height: 70px;
+      border-radius: 20px;
+      border: 3px solid var(--primary-color);
+      padding: 10px;
+      resize: none;
+      margin: 0 0 0 0;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-family: 'PixelCraft Bold', sans-serif;
+      font-size: 16px;
+      background: none;
+      color: var(--masterball);
+      text-decoration: 3px underline;
+    }
+
+    .p_status {
+      margin: 0px 0 30px 0;
+      font-family: 'PixelCraft Bold', sans-serif;
+      font-size: 14px;
+      color: var(--masterball-side);
+    }
+}
+
+/* Media Queries */
+/* Pantallas Menores a 650px */
+@media (max-width: 650px) {
+  .div_main_logged {
+    padding: 10px 0 40px 0;
+  }
+
+  .h1_logged {
+    font-size: 50px;
+    padding: 0 30px 0 30px;
+  }
+
+  .btn_leaderboard,
+  .btn_logout {
+    font-size: 18px;
+  }
+
+  .div_data span {
+    font-size: 18px;
+  }
+
+  .div_menu {
+    padding: 0 30px;
+  }
+
+  .span_section {
+    font-size: 18px;
+    width: 350px;
+    margin: 20px 0 -30px 0;
+  }
+
+  .div_section {
+    width: 350px;
+  }
+}
+
+/* Pantallas Menores a 460px */
+@media (max-width: 460px) {
+  .h1_logged {
+    font-size: 35px;
+    padding: 10px 30px 0 30px;
+  }
+
+  .btn_leaderboard,
+  .btn_logout {
+    font-size: 16px;
+  }
+
+  .division_one,
+  .division_two {
+    flex-direction: column;
+  }
+
+  .div_data span {
+    font-size: 18px;
+  }
+
+  .div_menu {
+    padding: 0 20px;
+  }
+
+  .span_section {
+    font-size: 16px;
+    width: 250px;
+    margin: 20px 0 -30px 0;
+  }
+
+  .div_section {
+    width: 250px;
+    height: 90px;
+  }
+}

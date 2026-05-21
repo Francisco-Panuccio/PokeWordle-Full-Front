@@ -1,0 +1,1775 @@
+[
+    {
+        "name": "azurill",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "yveltal",
+        "type": "dark",
+        "region": "kalos"
+    },
+    {
+        "name": "pancham",
+        "type": "fighting",
+        "region": "kalos",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "shellos",
+        "type": "water",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "linoone",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "skorupi",
+        "type": "poison",
+        "region": "sinnoh",
+        "champions": [
+            "iris",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "glaceon",
+        "type": "ice",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "sneasel",
+        "type": "dark",
+        "region": "johto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "honedge",
+        "type": "steel",
+        "region": "kalos",
+        "champions": [
+            "leon",
+            "diantha"
+        ]
+    },
+    {
+        "name": "dratini",
+        "type": "dragon",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance"
+        ]
+    },
+    {
+        "name": "dwebble",
+        "type": "bug",
+        "region": "unova"
+    },
+    {
+        "name": "toxapex",
+        "type": "poison",
+        "region": "alola",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "cherubi",
+        "type": "grass",
+        "region": "sinnoh",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "slaking",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "kingdra",
+        "type": "water",
+        "region": "johto",
+        "champions": [
+            "lance",
+            "steven"
+        ]
+    },
+    {
+        "name": "wailmer",
+        "type": "water",
+        "region": "hoenn"
+    },
+    {
+        "name": "snorlax",
+        "type": "normal",
+        "region": "kanto",
+        "champions": [
+            "lance",
+            "ash"
+        ]
+    },
+    {
+        "name": "swellow",
+        "type": "normal",
+        "region": "hoenn",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "buneary",
+        "type": "normal",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "sliggoo",
+        "type": "dragon",
+        "region": "kalos",
+        "champions": [
+            "diantha",
+            "leon"
+        ]
+    },
+    {
+        "name": "floette",
+        "type": "fairy",
+        "region": "kalos"
+    },
+    {
+        "name": "flaaffy",
+        "type": "electric",
+        "region": "johto"
+    },
+    {
+        "name": "zeraora",
+        "type": "electric",
+        "region": "alola"
+    },
+    {
+        "name": "yanmega",
+        "type": "bug",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "timburr",
+        "type": "fighting",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "slakoth",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "zoroark",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "ivysaur",
+        "type": "grass",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "bibarel",
+        "type": "normal",
+        "region": "sinnoh"
+    },
+    {
+        "name": "wattrel",
+        "type": "electric",
+        "region": "paldea"
+    },
+    {
+        "name": "pangoro",
+        "type": "fighting",
+        "region": "kalos",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "heatmor",
+        "type": "fire",
+        "region": "unova"
+    },
+    {
+        "name": "avalugg",
+        "type": "ice",
+        "region": "kalos"
+    },
+    {
+        "name": "chespin",
+        "type": "grass",
+        "region": "kalos"
+    },
+    {
+        "name": "milcery",
+        "type": "fairy",
+        "region": "galar"
+    },
+    {
+        "name": "geodude",
+        "type": "rock",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "slowbro",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "cynthia",
+            "lance"
+        ]
+    },
+    {
+        "name": "psyduck",
+        "type": "water",
+        "region": "kanto"
+    },
+    {
+        "name": "surskit",
+        "type": "bug",
+        "region": "hoenn"
+    },
+    {
+        "name": "torchic",
+        "type": "fire",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "vibrava",
+        "type": "ground",
+        "region": "hoenn",
+        "champions": [
+            "lance",
+            "steven",
+            "cynthia",
+            "leon"
+        ]
+    },
+    {
+        "name": "machoke",
+        "type": "fighting",
+        "region": "kanto",
+        "champions": [
+            "lance",
+            "ash",
+            "iris"
+        ]
+    },
+    {
+        "name": "noivern",
+        "type": "flying",
+        "region": "kalos",
+        "champions": [
+            "ash",
+            "diantha"
+        ]
+    },
+    {
+        "name": "panpour",
+        "type": "water",
+        "region": "unova"
+    },
+    {
+        "name": "flareon",
+        "type": "fire",
+        "region": "kanto",
+        "champions": [
+            "leon",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "gurdurr",
+        "type": "fighting",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "sunkern",
+        "type": "grass",
+        "region": "johto"
+    },
+    {
+        "name": "diglett",
+        "type": "ground",
+        "region": "kanto"
+    },
+    {
+        "name": "snorunt",
+        "type": "ice",
+        "region": "hoenn",
+        "champions": [
+            "ash",
+            "steven",
+            "iris"
+        ]
+    },
+    {
+        "name": "umbreon",
+        "type": "dark",
+        "region": "johto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "fraxure",
+        "type": "dragon",
+        "region": "unova",
+        "champions": [
+            "lance",
+            "iris",
+            "leon",
+            "steven"
+        ]
+    },
+    {
+        "name": "xerneas",
+        "type": "fairy",
+        "region": "kalos"
+    },
+    {
+        "name": "wyrdeer",
+        "type": "normal",
+        "region": "galar"
+    },
+    {
+        "name": "lopunny",
+        "type": "normal",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "glimmet",
+        "type": "rock",
+        "region": "paldea"
+    },
+    {
+        "name": "treecko",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "finneon",
+        "type": "water",
+        "region": "sinnoh"
+    },
+    {
+        "name": "armaldo",
+        "type": "rock",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "aurorus",
+        "type": "rock",
+        "region": "kalos",
+        "champions": [
+            "diantha"
+        ]
+    },
+    {
+        "name": "koffing",
+        "type": "poison",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance"
+        ]
+    },
+    {
+        "name": "bruxish",
+        "type": "water",
+        "region": "alola"
+    },
+    {
+        "name": "togetic",
+        "type": "fairy",
+        "region": "johto",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "morgrem",
+        "type": "dark",
+        "region": "galar"
+    },
+    {
+        "name": "shaymin",
+        "type": "grass",
+        "region": "sinnoh"
+    },
+    {
+        "name": "palafin",
+        "type": "water",
+        "region": "paldea"
+    },
+    {
+        "name": "bisharp",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "sandile",
+        "type": "ground",
+        "region": "unova",
+        "champions": [
+            "ash",
+            "iris"
+        ]
+    },
+    {
+        "name": "manaphy",
+        "type": "water",
+        "region": "sinnoh"
+    },
+    {
+        "name": "kecleon",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "golduck",
+        "type": "water",
+        "region": "kanto"
+    },
+    {
+        "name": "thievul",
+        "type": "dark",
+        "region": "galar"
+    },
+    {
+        "name": "delphox",
+        "type": "fire",
+        "region": "kalos"
+    },
+    {
+        "name": "vullaby",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "pansage",
+        "type": "grass",
+        "region": "unova"
+    },
+    {
+        "name": "mimikyu",
+        "type": "ghost",
+        "region": "alola",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "sentret",
+        "type": "normal",
+        "region": "johto"
+    },
+    {
+        "name": "pikachu",
+        "type": "electric",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "poipole",
+        "type": "poison",
+        "region": "alola"
+    },
+    {
+        "name": "boldore",
+        "type": "rock",
+        "region": "unova",
+        "champions": [
+            "leon",
+            "ash"
+        ]
+    },
+    {
+        "name": "ninjask",
+        "type": "bug",
+        "region": "hoenn"
+    },
+    {
+        "name": "drapion",
+        "type": "poison",
+        "region": "sinnoh",
+        "champions": [
+            "iris",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "seaking",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "malamar",
+        "type": "dark",
+        "region": "kalos",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "omastar",
+        "type": "rock",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "shuckle",
+        "type": "bug",
+        "region": "johto",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "claydol",
+        "type": "ground",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "weezing",
+        "type": "poison",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance"
+        ]
+    },
+    {
+        "name": "stufful",
+        "type": "normal",
+        "region": "alola"
+    },
+    {
+        "name": "duosion",
+        "type": "psychic",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "dubwool",
+        "type": "normal",
+        "region": "galar"
+    },
+    {
+        "name": "grookey",
+        "type": "grass",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "shelgon",
+        "type": "dragon",
+        "region": "hoenn",
+        "champions": [
+            "steven",
+            "iris",
+            "lance"
+        ]
+    },
+    {
+        "name": "jirachi",
+        "type": "steel",
+        "region": "hoenn"
+    },
+    {
+        "name": "furfrou",
+        "type": "normal",
+        "region": "kalos"
+    },
+    {
+        "name": "steelix",
+        "type": "steel",
+        "region": "johto",
+        "champions": [
+            "ash",
+            "cynthia",
+            "lance"
+        ]
+    },
+    {
+        "name": "dartrix",
+        "type": "grass",
+        "region": "alola"
+    },
+    {
+        "name": "dondozo",
+        "type": "water",
+        "region": "paldea"
+    },
+    {
+        "name": "grubbin",
+        "type": "bug",
+        "region": "alola"
+    },
+    {
+        "name": "roselia",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "dottler",
+        "type": "bug",
+        "region": "galar"
+    },
+    {
+        "name": "sableye",
+        "type": "dark",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "marowak",
+        "type": "ground",
+        "region": "kanto"
+    },
+    {
+        "name": "purugly",
+        "type": "normal",
+        "region": "sinnoh"
+    },
+    {
+        "name": "anorith",
+        "type": "rock",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "lechonk",
+        "type": "normal",
+        "region": "paldea"
+    },
+    {
+        "name": "pikipek",
+        "type": "normal",
+        "region": "alola"
+    },
+    {
+        "name": "spidops",
+        "type": "bug",
+        "region": "paldea"
+    },
+    {
+        "name": "scyther",
+        "type": "bug",
+        "region": "kanto",
+        "champions": [
+            "diantha",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "poliwag",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance"
+        ]
+    },
+    {
+        "name": "luvdisc",
+        "type": "water",
+        "region": "hoenn"
+    },
+    {
+        "name": "tangela",
+        "type": "grass",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "persian",
+        "type": "normal",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "spearow",
+        "type": "normal",
+        "region": "kanto"
+    },
+    {
+        "name": "jolteon",
+        "type": "electric",
+        "region": "kanto",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "binacle",
+        "type": "rock",
+        "region": "kalos",
+        "champions": [
+            "diantha",
+            "leon"
+        ]
+    },
+    {
+        "name": "mienfoo",
+        "type": "fighting",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "pignite",
+        "type": "fire",
+        "region": "unova",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "foongus",
+        "type": "grass",
+        "region": "unova"
+    },
+    {
+        "name": "solosis",
+        "type": "psychic",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "huntail",
+        "type": "water",
+        "region": "hoenn"
+    },
+    {
+        "name": "boltund",
+        "type": "electric",
+        "region": "galar"
+    },
+    {
+        "name": "porygon",
+        "type": "normal",
+        "region": "kanto",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "banette",
+        "type": "ghost",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "tyrogue",
+        "type": "fighting",
+        "region": "johto",
+        "champions": [
+            "lance",
+            "leon"
+        ]
+    },
+    {
+        "name": "dipplin",
+        "type": "grass",
+        "region": "paldea"
+    },
+    {
+        "name": "cubchoo",
+        "type": "ice",
+        "region": "unova",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "cursola",
+        "type": "ghost",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "popplio",
+        "type": "water",
+        "region": "alola"
+    },
+    {
+        "name": "haunter",
+        "type": "ghost",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "lance"
+        ]
+    },
+    {
+        "name": "wugtrio",
+        "type": "water",
+        "region": "paldea"
+    },
+    {
+        "name": "morpeko",
+        "type": "electric",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "flapple",
+        "type": "grass",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "fidough",
+        "type": "fairy",
+        "region": "paldea"
+    },
+    {
+        "name": "volbeat",
+        "type": "bug",
+        "region": "hoenn"
+    },
+    {
+        "name": "lucario",
+        "type": "fighting",
+        "region": "sinnoh",
+        "champions": [
+            "iris",
+            "lance",
+            "ash",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "murkrow",
+        "type": "dark",
+        "region": "johto",
+        "champions": [
+            "lance",
+            "iris"
+        ]
+    },
+    {
+        "name": "venonat",
+        "type": "bug",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "voltorb",
+        "type": "electric",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "kadabra",
+        "type": "psychic",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "cynthia",
+            "lance"
+        ]
+    },
+    {
+        "name": "loudred",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "ariados",
+        "type": "bug",
+        "region": "johto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "weavile",
+        "type": "dark",
+        "region": "sinnoh",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "litwick",
+        "type": "ghost",
+        "region": "unova",
+        "champions": [
+            "iris",
+            "leon",
+            "steven",
+            "diantha"
+        ]
+    },
+    {
+        "name": "diancie",
+        "type": "rock",
+        "region": "kalos"
+    },
+    {
+        "name": "scrafty",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "leon",
+            "steven",
+            "iris"
+        ]
+    },
+    {
+        "name": "milotic",
+        "type": "water",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "scraggy",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "leon",
+            "steven",
+            "iris",
+            "ash"
+        ]
+    },
+    {
+        "name": "crustle",
+        "type": "bug",
+        "region": "unova"
+    },
+    {
+        "name": "tadbulb",
+        "type": "electric",
+        "region": "paldea"
+    },
+    {
+        "name": "exploud",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "hattrem",
+        "type": "psychic",
+        "region": "galar"
+    },
+    {
+        "name": "suicune",
+        "type": "water",
+        "region": "johto"
+    },
+    {
+        "name": "wiglett",
+        "type": "water",
+        "region": "paldea"
+    },
+    {
+        "name": "happiny",
+        "type": "normal",
+        "region": "sinnoh",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "starmie",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "diantha"
+        ]
+    },
+    {
+        "name": "silcoon",
+        "type": "bug",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "beartic",
+        "type": "ice",
+        "region": "unova",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "dugtrio",
+        "type": "ground",
+        "region": "kanto"
+    },
+    {
+        "name": "victini",
+        "type": "psychic",
+        "region": "unova"
+    },
+    {
+        "name": "petilil",
+        "type": "grass",
+        "region": "unova"
+    },
+    {
+        "name": "wailord",
+        "type": "water",
+        "region": "hoenn"
+    },
+    {
+        "name": "ambipom",
+        "type": "normal",
+        "region": "sinnoh"
+    },
+    {
+        "name": "torkoal",
+        "type": "fire",
+        "region": "hoenn",
+        "champions": [
+            "leon",
+            "diantha",
+            "ash"
+        ]
+    },
+    {
+        "name": "hatenna",
+        "type": "psychic",
+        "region": "galar"
+    },
+    {
+        "name": "whismur",
+        "type": "normal",
+        "region": "hoenn"
+    },
+    {
+        "name": "leafeon",
+        "type": "grass",
+        "region": "sinnoh"
+    },
+    {
+        "name": "chewtle",
+        "type": "water",
+        "region": "galar"
+    },
+    {
+        "name": "yungoos",
+        "type": "normal",
+        "region": "alola"
+    },
+    {
+        "name": "okidogi",
+        "type": "poison",
+        "region": "paldea"
+    },
+    {
+        "name": "drilbur",
+        "type": "ground",
+        "region": "unova",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "herdier",
+        "type": "normal",
+        "region": "unova"
+    },
+    {
+        "name": "lanturn",
+        "type": "water",
+        "region": "johto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "seviper",
+        "type": "poison",
+        "region": "hoenn"
+    },
+    {
+        "name": "cradily",
+        "type": "rock",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "braixen",
+        "type": "fire",
+        "region": "kalos"
+    },
+    {
+        "name": "blitzle",
+        "type": "electric",
+        "region": "unova"
+    },
+    {
+        "name": "cosmoem",
+        "type": "psychic",
+        "region": "alola"
+    },
+    {
+        "name": "goldeen",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "grumpig",
+        "type": "psychic",
+        "region": "hoenn",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "moltres",
+        "type": "fire",
+        "region": "kanto"
+    },
+    {
+        "name": "mantine",
+        "type": "water",
+        "region": "johto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "tropius",
+        "type": "grass",
+        "region": "hoenn"
+    },
+    {
+        "name": "ogerpon",
+        "type": "grass",
+        "region": "paldea"
+    },
+    {
+        "name": "kartana",
+        "type": "grass",
+        "region": "alola"
+    },
+    {
+        "name": "metapod",
+        "type": "bug",
+        "region": "kanto"
+    },
+    {
+        "name": "blipbug",
+        "type": "bug",
+        "region": "galar"
+    },
+    {
+        "name": "bronzor",
+        "type": "steel",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia",
+            "iris",
+            "lance"
+        ]
+    },
+    {
+        "name": "blissey",
+        "type": "normal",
+        "region": "johto"
+    },
+    {
+        "name": "cetitan",
+        "type": "ice",
+        "region": "paldea"
+    },
+    {
+        "name": "calyrex",
+        "type": "psychic",
+        "region": "galar"
+    },
+    {
+        "name": "dewgong",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "servine",
+        "type": "grass",
+        "region": "unova"
+    },
+    {
+        "name": "lampent",
+        "type": "ghost",
+        "region": "unova",
+        "champions": [
+            "iris",
+            "leon",
+            "steven",
+            "diantha"
+        ]
+    },
+    {
+        "name": "falinks",
+        "type": "fighting",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "haxorus",
+        "type": "dragon",
+        "region": "unova",
+        "champions": [
+            "lance",
+            "iris",
+            "leon",
+            "steven"
+        ]
+    },
+    {
+        "name": "finizen",
+        "type": "water",
+        "region": "paldea"
+    },
+    {
+        "name": "pidgeot",
+        "type": "normal",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "mudbray",
+        "type": "ground",
+        "region": "alola"
+    },
+    {
+        "name": "groudon",
+        "type": "ground",
+        "region": "hoenn"
+    },
+    {
+        "name": "omanyte",
+        "type": "rock",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "froakie",
+        "type": "water",
+        "region": "kalos",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "drednaw",
+        "type": "water",
+        "region": "galar",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "turtwig",
+        "type": "grass",
+        "region": "sinnoh",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "wingull",
+        "type": "water",
+        "region": "hoenn",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "kleavor",
+        "type": "bug",
+        "region": "galar"
+    },
+    {
+        "name": "glameow",
+        "type": "normal",
+        "region": "sinnoh"
+    },
+    {
+        "name": "pansear",
+        "type": "fire",
+        "region": "unova"
+    },
+    {
+        "name": "shiftry",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "steven",
+            "leon"
+        ]
+    },
+    {
+        "name": "darkrai",
+        "type": "dark",
+        "region": "sinnoh"
+    },
+    {
+        "name": "bayleef",
+        "type": "grass",
+        "region": "johto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "grovyle",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "noctowl",
+        "type": "normal",
+        "region": "johto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "mantyke",
+        "type": "water",
+        "region": "sinnoh",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "donphan",
+        "type": "ground",
+        "region": "johto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "machamp",
+        "type": "fighting",
+        "region": "kanto",
+        "champions": [
+            "ash",
+            "iris",
+            "lance"
+        ]
+    },
+    {
+        "name": "cascoon",
+        "type": "bug",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "shuppet",
+        "type": "ghost",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "pupitar",
+        "type": "rock",
+        "region": "johto",
+        "champions": [
+            "lance",
+            "iris",
+            "leon"
+        ]
+    },
+    {
+        "name": "rhyhorn",
+        "type": "ground",
+        "region": "kanto",
+        "champions": [
+            "cynthia",
+            "lance",
+            "ash",
+            "leon"
+        ]
+    },
+    {
+        "name": "rattata",
+        "type": "normal",
+        "region": "kanto"
+    },
+    {
+        "name": "corsola",
+        "type": "water",
+        "region": "johto"
+    },
+    {
+        "name": "liepard",
+        "type": "dark",
+        "region": "unova",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "quilava",
+        "type": "fire",
+        "region": "johto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "walrein",
+        "type": "ice",
+        "region": "hoenn",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "breloom",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "heatran",
+        "type": "fire",
+        "region": "sinnoh"
+    },
+    {
+        "name": "brionne",
+        "type": "water",
+        "region": "alola"
+    },
+    {
+        "name": "nuzleaf",
+        "type": "grass",
+        "region": "hoenn",
+        "champions": [
+            "leon",
+            "steven"
+        ]
+    },
+    {
+        "name": "flittle",
+        "type": "psychic",
+        "region": "paldea"
+    },
+    {
+        "name": "rufflet",
+        "type": "normal",
+        "region": "unova",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "mesprit",
+        "type": "psychic",
+        "region": "sinnoh"
+    },
+    {
+        "name": "gothita",
+        "type": "psychic",
+        "region": "unova",
+        "champions": [
+            "iris"
+        ]
+    },
+    {
+        "name": "florges",
+        "type": "fairy",
+        "region": "kalos"
+    },
+    {
+        "name": "nincada",
+        "type": "bug",
+        "region": "hoenn"
+    },
+    {
+        "name": "swoobat",
+        "type": "psychic",
+        "region": "unova"
+    },
+    {
+        "name": "fuecoco",
+        "type": "fire",
+        "region": "paldea"
+    },
+    {
+        "name": "gliscor",
+        "type": "ground",
+        "region": "sinnoh",
+        "champions": [
+            "ash",
+            "cynthia"
+        ]
+    },
+    {
+        "name": "miltank",
+        "type": "normal",
+        "region": "johto"
+    },
+    {
+        "name": "shelmet",
+        "type": "bug",
+        "region": "unova"
+    },
+    {
+        "name": "duskull",
+        "type": "ghost",
+        "region": "hoenn",
+        "champions": [
+            "steven",
+            "leon"
+        ]
+    },
+    {
+        "name": "dedenne",
+        "type": "electric",
+        "region": "kalos"
+    },
+    {
+        "name": "swirlix",
+        "type": "fairy",
+        "region": "kalos"
+    },
+    {
+        "name": "gallade",
+        "type": "psychic",
+        "region": "sinnoh",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "drowzee",
+        "type": "psychic",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "wurmple",
+        "type": "bug",
+        "region": "hoenn",
+        "champions": [
+            "cynthia"
+        ]
+    },
+    {
+        "name": "cherrim",
+        "type": "grass",
+        "region": "sinnoh",
+        "champions": [
+            "leon"
+        ]
+    },
+    {
+        "name": "sylveon",
+        "type": "fairy",
+        "region": "kalos"
+    },
+    {
+        "name": "skwovet",
+        "type": "normal",
+        "region": "galar"
+    },
+    {
+        "name": "watchog",
+        "type": "normal",
+        "region": "unova"
+    },
+    {
+        "name": "chansey",
+        "type": "normal",
+        "region": "kanto",
+        "champions": [
+            "lance"
+        ]
+    },
+    {
+        "name": "carbink",
+        "type": "rock",
+        "region": "kalos",
+        "champions": [
+            "steven"
+        ]
+    },
+    {
+        "name": "flamigo",
+        "type": "flying",
+        "region": "paldea"
+    },
+    {
+        "name": "steenee",
+        "type": "grass",
+        "region": "alola"
+    },
+    {
+        "name": "kingler",
+        "type": "water",
+        "region": "kanto",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "tympole",
+        "type": "water",
+        "region": "unova",
+        "champions": [
+            "leon",
+            "ash"
+        ]
+    },
+    {
+        "name": "altaria",
+        "type": "dragon",
+        "region": "hoenn",
+        "champions": [
+            "lance",
+            "diantha",
+            "steven"
+        ]
+    },
+    {
+        "name": "taillow",
+        "type": "normal",
+        "region": "hoenn",
+        "champions": [
+            "ash"
+        ]
+    },
+    {
+        "name": "solrock",
+        "type": "rock",
+        "region": "hoenn"
+    }
+]

@@ -1,0 +1,54 @@
+@if(loading) { <app-loading/> }
+@else {
+    @if(showGameOver) {
+        <div class="div_game_over">
+            <p [class]="gameWon ? 'p_victory' : 'p_defeat'">{{ gameWon ? "Continue" : "Patethic..." }}</p>
+
+            @if(!gameWon) {
+                <span class="span_game_over">The Pokémon was <br> <span class="span_target_word">{{ targetWordPkmn | titlecase }}</span></span>
+            }
+
+            <img [hidden]="!(gameOver && gameWon)" src="/images/victory.jpg" alt="pikachu_victory" class="img_victory">
+            <img [hidden]="!(gameOver && !gameWon)" [src]="defeatImage" [alt]="defeatImage" class="img_defeat">
+
+            <button class="btn_replay" (click)="gameWon ? nextRound() : goToMenu()">{{gameWon ? "Keep Going" : "Try Again"}}</button>
+        </div>
+    } @else {
+        <div class="div_main_regional">
+            <div class="div_back">
+                <button class="btn_back" (click)="goToMenu()">Back</button>
+            </div>
+
+            <h1 class="h1_regional">{{region | titlecase}} = {{gymsPassed}}/{{targetGyms}}</h1>
+
+            <div class="div_hint_wordle">
+                <button (click)="revealHint()" [disabled]="showHint || gameOver" class="btn_hint_wordle">Hint</button>
+                @if(showHint) {
+                    <span class="span_hint_wordle" [appPkmnType]="pokemonType">{{pokemonType | titlecase}}</span>
+                }
+            </div>
+
+            <div class="div_wordle">
+                @for(a of attemptIndexes; let attemptIndex = $index; track attemptIndex) {
+                    <div class="div_row_wordle">
+                        @for(l of letterIndexes; let letterIndex = $index; track letterIndex) {
+                            <input type="text" maxlength="1" class="inp_letter_wordle"
+                                [(ngModel)]="attempts[attemptIndex][letterIndex].letter"
+                                (input)="onLetterInput($event, attemptIndex, letterIndex)"
+                                (keydown)="onLetterKeydown($event, attemptIndex, letterIndex)" autocomplete="off" autocapitalize="off"
+                                spellcheck="false" inputmode="text" #letterInput>
+                        }
+                    </div>
+                }
+                @if(invalidPokemon) {
+                    <span class="span_error_wordle">This is not a valid Pokémon</span>
+                }
+            </div>
+        </div>
+
+        <div class="div_title_rules" (click)="revealRules()">
+            <h2 class="h2_rules">Rules</h2>
+        </div>
+        @if(showRules) { <app-rules /> }
+    }
+}

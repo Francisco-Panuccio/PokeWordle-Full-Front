@@ -1,0 +1,4227 @@
+export interface EncodedPokemonEntry {
+  encodedName: number[];
+  nameHash: number;
+  regionHash: number;
+  championHashes: number[];
+  type: string | null;
+}
+
+export const encodedPokemonData: EncodedPokemonEntry[] = [
+  {
+    "encodedName": [
+      17,
+      74,
+      30,
+      65,
+      30,
+      92,
+      30
+    ],
+    "nameHash": 747705468,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      9,
+      70,
+      14,
+      95,
+      3,
+      81,
+      30
+    ],
+    "nameHash": 3492585412,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      5,
+      80,
+      31,
+      81,
+      31
+    ],
+    "nameHash": 832062949,
+    "regionHash": 2290643985,
+    "championHashes": [
+      775540579
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      14,
+      95,
+      27,
+      95,
+      1
+    ],
+    "nameHash": 2212052763,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      28,
+      89,
+      5,
+      92,
+      24,
+      94,
+      23
+    ],
+    "nameHash": 1311875775,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      91,
+      4,
+      65,
+      2,
+      64,
+      27
+    ],
+    "nameHash": 2655200218,
+    "regionHash": 1743463326,
+    "championHashes": [
+      782861478,
+      1069056051
+    ],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      23,
+      92,
+      10,
+      80,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 3559379368,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      3,
+      94,
+      14,
+      82,
+      4,
+      85,
+      30
+    ],
+    "nameHash": 253348390,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      24,
+      95,
+      5,
+      86,
+      19,
+      87,
+      23
+    ],
+    "nameHash": 2656408939,
+    "regionHash": 2290643985,
+    "championHashes": [
+      775540579,
+      1985801492
+    ],
+    "type": "steel"
+  },
+  {
+    "encodedName": [
+      20,
+      66,
+      10,
+      71,
+      30,
+      94,
+      27
+    ],
+    "nameHash": 494037728,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      20,
+      71,
+      14,
+      81,
+      21,
+      92,
+      23
+    ],
+    "nameHash": 2978190528,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      4,
+      95,
+      19,
+      82,
+      7,
+      85,
+      10
+    ],
+    "nameHash": 3121318272,
+    "regionHash": 3801595142,
+    "championHashes": [
+      775540579
+    ],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      19,
+      88,
+      14,
+      65,
+      2,
+      82,
+      27
+    ],
+    "nameHash": 769574785,
+    "regionHash": 1743463326,
+    "championHashes": [
+      775540579
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      3,
+      92,
+      10,
+      88,
+      30,
+      94,
+      21
+    ],
+    "nameHash": 2394416194,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      27,
+      89,
+      5,
+      84,
+      19,
+      66,
+      19
+    ],
+    "nameHash": 4011357591,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196,
+      4140001726
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      7,
+      81,
+      2,
+      95,
+      26,
+      85,
+      0
+    ],
+    "nameHash": 3363248372,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      94,
+      4,
+      65,
+      27,
+      81,
+      10
+    ],
+    "nameHash": 1308018390,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196,
+      426952831
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      71,
+      14,
+      95,
+      27,
+      95,
+      5
+    ],
+    "nameHash": 840340812,
+    "regionHash": 984820783,
+    "championHashes": [
+      426952831
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      18,
+      69,
+      5,
+      86,
+      22,
+      66,
+      11
+    ],
+    "nameHash": 3608390433,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      92,
+      2,
+      84,
+      16,
+      95,
+      29
+    ],
+    "nameHash": 3987335509,
+    "regionHash": 2290643985,
+    "championHashes": [
+      1985801492,
+      775540579
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      4,
+      86,
+      3,
+      68,
+      23
+    ],
+    "nameHash": 1154109550,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      10,
+      82,
+      17,
+      86,
+      11
+    ],
+    "nameHash": 1256882864,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      10,
+      85,
+      25,
+      82,
+      24,
+      66,
+      19
+    ],
+    "nameHash": 49657959,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      9,
+      81,
+      5,
+      94,
+      18,
+      87,
+      19
+    ],
+    "nameHash": 3069109997,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      4,
+      89,
+      6,
+      81,
+      2,
+      66,
+      0
+    ],
+    "nameHash": 2489026968,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      3,
+      92,
+      10,
+      88,
+      24,
+      68,
+      26
+    ],
+    "nameHash": 3961671767,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      10,
+      95,
+      25,
+      92,
+      22,
+      66,
+      25
+    ],
+    "nameHash": 1776144623,
+    "regionHash": 3157117262,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      25,
+      70,
+      18,
+      64,
+      22,
+      69,
+      0
+    ],
+    "nameHash": 3321079674,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      18,
+      89,
+      9,
+      82,
+      5,
+      85,
+      30
+    ],
+    "nameHash": 3575163904,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      7,
+      81,
+      31,
+      71,
+      5,
+      85,
+      30
+    ],
+    "nameHash": 2880878676,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      5,
+      84,
+      24,
+      66,
+      29
+    ],
+    "nameHash": 3807328885,
+    "regionHash": 2290643985,
+    "championHashes": [
+      775540579
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      24,
+      85,
+      10,
+      71,
+      26,
+      95,
+      0
+    ],
+    "nameHash": 659642407,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      17,
+      70,
+      10,
+      95,
+      2,
+      87,
+      21
+    ],
+    "nameHash": 3298851368,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      19,
+      88,
+      14,
+      64,
+      7,
+      89,
+      28
+    ],
+    "nameHash": 3458505581,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      29,
+      89,
+      7,
+      80,
+      18,
+      66,
+      11
+    ],
+    "nameHash": 937233532,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      23,
+      85,
+      4,
+      87,
+      2,
+      84,
+      23
+    ],
+    "nameHash": 1610771458,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196,
+      1069056051
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      3,
+      92,
+      4,
+      68,
+      21,
+      66,
+      29
+    ],
+    "nameHash": 264690529,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      1069056051,
+      3769768196
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      0,
+      67,
+      18,
+      87,
+      2,
+      83,
+      25
+    ],
+    "nameHash": 2919014842,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      69,
+      25,
+      64,
+      28,
+      89,
+      6
+    ],
+    "nameHash": 1121936278,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      4,
+      95,
+      25,
+      80,
+      31,
+      89,
+      17
+    ],
+    "nameHash": 1078287585,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      6,
+      89,
+      9,
+      65,
+      22,
+      70,
+      19
+    ],
+    "nameHash": 3671326854,
+    "regionHash": 984820783,
+    "championHashes": [
+      3769768196,
+      4140001726,
+      1069056051,
+      775540579
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      8,
+      91,
+      24,
+      91,
+      23
+    ],
+    "nameHash": 1015945797,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196,
+      426952831,
+      782861478
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      30,
+      95,
+      2,
+      69,
+      18,
+      66,
+      28
+    ],
+    "nameHash": 1545281648,
+    "regionHash": 2290643985,
+    "championHashes": [
+      426952831,
+      1985801492
+    ],
+    "type": "flying"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      5,
+      67,
+      24,
+      69,
+      0
+    ],
+    "nameHash": 546168522,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      10,
+      65,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 1216923410,
+    "regionHash": 1842540828,
+    "championHashes": [
+      775540579,
+      1069056051
+    ],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      23,
+      69,
+      25,
+      87,
+      2,
+      66,
+      0
+    ],
+    "nameHash": 1055569538,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      3,
+      69,
+      5,
+      88,
+      18,
+      66,
+      28
+    ],
+    "nameHash": 107810277,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      20,
+      89,
+      12,
+      95,
+      18,
+      68,
+      6
+    ],
+    "nameHash": 1091096984,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      3,
+      94,
+      4,
+      65,
+      2,
+      94,
+      6
+    ],
+    "nameHash": 2257207358,
+    "regionHash": 984820783,
+    "championHashes": [
+      426952831,
+      4140001726,
+      782861478
+    ],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      5,
+      93,
+      9,
+      65,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 1531050639,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      22,
+      66,
+      10,
+      75,
+      2,
+      66,
+      23
+    ],
+    "nameHash": 48590254,
+    "regionHash": 3157117262,
+    "championHashes": [
+      3769768196,
+      782861478,
+      775540579,
+      4140001726
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      8,
+      85,
+      25,
+      93,
+      18,
+      81,
+      1
+    ],
+    "nameHash": 3296211121,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      7,
+      73,
+      25,
+      87,
+      18,
+      85,
+      0
+    ],
+    "nameHash": 2511980109,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      28,
+      95,
+      27,
+      70,
+      25,
+      94,
+      11
+    ],
+    "nameHash": 3551577750,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      23,
+      92,
+      2,
+      94,
+      26,
+      85,
+      6
+    ],
+    "nameHash": 136376654,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      4,
+      66,
+      14,
+      86,
+      20,
+      91,
+      29
+    ],
+    "nameHash": 19314220,
+    "regionHash": 984820783,
+    "championHashes": [
+      426952831
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      22,
+      89,
+      5,
+      93,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 1889911766,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      17,
+      66,
+      6,
+      82,
+      27,
+      84,
+      29
+    ],
+    "nameHash": 180367337,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      17,
+      69,
+      25,
+      92,
+      5,
+      69,
+      1
+    ],
+    "nameHash": 3917918890,
+    "regionHash": 2290643985,
+    "championHashes": [
+      1985801492
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      27,
+      95,
+      13,
+      85,
+      30,
+      94,
+      21
+    ],
+    "nameHash": 1263149265,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196
+    ],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      18,
+      66,
+      30,
+      75,
+      30,
+      67,
+      26
+    ],
+    "nameHash": 63879832,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      95,
+      12,
+      86,
+      3,
+      89,
+      17
+    ],
+    "nameHash": 1733619736,
+    "regionHash": 727830303,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      29,
+      95,
+      25,
+      84,
+      5,
+      85,
+      31
+    ],
+    "nameHash": 782847522,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      10,
+      74,
+      26,
+      89,
+      28
+    ],
+    "nameHash": 2793299600,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      7,
+      82,
+      17,
+      89,
+      28
+    ],
+    "nameHash": 3108501654,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      18,
+      89,
+      24,
+      91,
+      22,
+      66,
+      2
+    ],
+    "nameHash": 1583080528,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      3,
+      81,
+      5,
+      87,
+      30,
+      92,
+      23
+    ],
+    "nameHash": 3060395657,
+    "regionHash": 3157117262,
+    "championHashes": [
+      426952831,
+      782861478
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      5,
+      82,
+      7,
+      88,
+      11
+    ],
+    "nameHash": 3318248177,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      27,
+      85,
+      8,
+      95,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 1081675568,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      23,
+      95,
+      7,
+      87,
+      2,
+      83,
+      25
+    ],
+    "nameHash": 2544234520,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      88,
+      2,
+      86,
+      1,
+      69,
+      30
+    ],
+    "nameHash": 1257840986,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      20,
+      85,
+      7,
+      67,
+      31,
+      95,
+      10
+    ],
+    "nameHash": 3869992557,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      6,
+      69,
+      7,
+      95,
+      22,
+      82,
+      11
+    ],
+    "nameHash": 2491219970,
+    "regionHash": 3157117262,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      5,
+      64,
+      22,
+      87,
+      23
+    ],
+    "nameHash": 2125705524,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      29,
+      89,
+      6,
+      90,
+      28,
+      73,
+      7
+    ],
+    "nameHash": 717622744,
+    "regionHash": 3801595142,
+    "championHashes": [
+      775540579
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      3,
+      85,
+      5,
+      71,
+      5,
+      85,
+      6
+    ],
+    "nameHash": 1488437894,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      0,
+      89,
+      0,
+      82,
+      20,
+      88,
+      7
+    ],
+    "nameHash": 448630920,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      0,
+      95,
+      2,
+      67,
+      24,
+      92,
+      23
+    ],
+    "nameHash": 947855573,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      18,
+      95,
+      7,
+      87,
+      24,
+      66,
+      23
+    ],
+    "nameHash": 3813164970,
+    "regionHash": 3157117262,
+    "championHashes": [
+      775540579,
+      426952831
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      30,
+      89,
+      5,
+      89,
+      22,
+      67,
+      25
+    ],
+    "nameHash": 4219000537,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      20,
+      66,
+      10,
+      67,
+      30,
+      95,
+      28
+    ],
+    "nameHash": 2571132684,
+    "regionHash": 1743463326,
+    "championHashes": [
+      782861478,
+      1069056051
+    ],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      3,
+      85,
+      10,
+      88,
+      30,
+      94,
+      21
+    ],
+    "nameHash": 2777929563,
+    "regionHash": 1842540828,
+    "championHashes": [
+      775540579
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      7,
+      82,
+      26,
+      81,
+      0
+    ],
+    "nameHash": 791063740,
+    "regionHash": 2290643985,
+    "championHashes": [
+      775540579
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      31,
+      93,
+      10,
+      64,
+      3,
+      81,
+      0
+    ],
+    "nameHash": 4292074456,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      30,
+      80,
+      28,
+      92,
+      23
+    ],
+    "nameHash": 1141150396,
+    "regionHash": 727830303,
+    "championHashes": [
+      775540579
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      19,
+      92,
+      10,
+      74,
+      19,
+      95,
+      30
+    ],
+    "nameHash": 3239927079,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      7,
+      85,
+      14,
+      73,
+      30,
+      94,
+      21
+    ],
+    "nameHash": 1303533894,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196
+    ],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      3,
+      68,
+      30,
+      85,
+      17,
+      69,
+      30
+    ],
+    "nameHash": 2167665372,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      20,
+      69,
+      4,
+      64,
+      30,
+      95,
+      28
+    ],
+    "nameHash": 4091387402,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      20,
+      69,
+      9,
+      68,
+      24,
+      95,
+      30
+    ],
+    "nameHash": 4260841629,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      23,
+      66,
+      4,
+      92,
+      28,
+      85,
+      11
+    ],
+    "nameHash": 927422585,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      14,
+      95,
+      16,
+      95,
+      28
+    ],
+    "nameHash": 3260424921,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726,
+      782861478,
+      3769768196
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      26,
+      89,
+      25,
+      82,
+      20,
+      88,
+      27
+    ],
+    "nameHash": 3181208201,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "steel"
+  },
+  {
+    "encodedName": [
+      22,
+      69,
+      25,
+      85,
+      5,
+      95,
+      7
+    ],
+    "nameHash": 3910630158,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      68,
+      14,
+      86,
+      27,
+      89,
+      10
+    ],
+    "nameHash": 4015871549,
+    "regionHash": 727830303,
+    "championHashes": [
+      426952831,
+      1069056051,
+      3769768196
+    ],
+    "type": "steel"
+  },
+  {
+    "encodedName": [
+      20,
+      81,
+      25,
+      71,
+      5,
+      89,
+      10
+    ],
+    "nameHash": 3122529383,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      20,
+      95,
+      5,
+      87,
+      24,
+      74,
+      29
+    ],
+    "nameHash": 1853374236,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      23,
+      66,
+      30,
+      81,
+      21,
+      89,
+      28
+    ],
+    "nameHash": 2318425400,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      2,
+      95,
+      24,
+      86,
+      27,
+      89,
+      19
+    ],
+    "nameHash": 709571740,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      20,
+      95,
+      31,
+      71,
+      27,
+      85,
+      0
+    ],
+    "nameHash": 1086155847,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      3,
+      81,
+      9,
+      95,
+      18,
+      73,
+      23
+    ],
+    "nameHash": 993518280,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      25,
+      92,
+      0,
+      81,
+      25
+    ],
+    "nameHash": 641387793,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      0,
+      69,
+      25,
+      70,
+      16,
+      92,
+      11
+    ],
+    "nameHash": 1626430763,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      17,
+      94,
+      4,
+      65,
+      30,
+      68,
+      26
+    ],
+    "nameHash": 1124255818,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      28,
+      85,
+      8,
+      91,
+      24,
+      94,
+      25
+    ],
+    "nameHash": 614986269,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      0,
+      89,
+      0,
+      90,
+      7,
+      85,
+      25
+    ],
+    "nameHash": 807028666,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      64,
+      2,
+      87,
+      24,
+      64,
+      1
+    ],
+    "nameHash": 2720193445,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      3,
+      83,
+      18,
+      71,
+      31,
+      85,
+      0
+    ],
+    "nameHash": 2999708885,
+    "regionHash": 1842540828,
+    "championHashes": [
+      1985801492,
+      1069056051
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      0,
+      95,
+      7,
+      90,
+      0,
+      81,
+      21
+    ],
+    "nameHash": 4284547804,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      28,
+      69,
+      29,
+      87,
+      30,
+      67,
+      17
+    ],
+    "nameHash": 2687771633,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      81,
+      5,
+      84,
+      18,
+      92,
+      19
+    ],
+    "nameHash": 1193877447,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      0,
+      85,
+      25,
+      64,
+      30,
+      81,
+      28
+    ],
+    "nameHash": 3818683731,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      64,
+      14,
+      82,
+      5,
+      95,
+      5
+    ],
+    "nameHash": 2412255036,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      26,
+      95,
+      7,
+      71,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 619388,
+    "regionHash": 1842540828,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      18,
+      89,
+      5,
+      82,
+      20,
+      92,
+      23
+    ],
+    "nameHash": 198890741,
+    "regionHash": 2290643985,
+    "championHashes": [
+      1985801492,
+      775540579
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      29,
+      89,
+      14,
+      93,
+      17,
+      95,
+      29
+    ],
+    "nameHash": 2744076476,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      0,
+      89,
+      12,
+      93,
+      30,
+      68,
+      23
+    ],
+    "nameHash": 3213598993,
+    "regionHash": 3157117262,
+    "championHashes": [
+      426952831
+    ],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      22,
+      95,
+      4,
+      93,
+      16,
+      69,
+      1
+    ],
+    "nameHash": 3815044608,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      3,
+      95,
+      7,
+      92,
+      4,
+      89,
+      1
+    ],
+    "nameHash": 3927924863,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      24,
+      69,
+      5,
+      71,
+      22,
+      89,
+      30
+    ],
+    "nameHash": 1651534570,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      18,
+      95,
+      7,
+      71,
+      2,
+      94,
+      22
+    ],
+    "nameHash": 2824509331,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      0,
+      95,
+      25,
+      74,
+      16,
+      95,
+      28
+    ],
+    "nameHash": 584831207,
+    "regionHash": 1842540828,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      18,
+      81,
+      5,
+      86,
+      3,
+      68,
+      23
+    ],
+    "nameHash": 3943739956,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      4,
+      73,
+      25,
+      92,
+      16,
+      69,
+      23
+    ],
+    "nameHash": 1604969760,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196,
+      775540579
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      20,
+      89,
+      27,
+      67,
+      27,
+      89,
+      28
+    ],
+    "nameHash": 1094137593,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      19,
+      69,
+      9,
+      80,
+      31,
+      95,
+      29
+    ],
+    "nameHash": 104981972,
+    "regionHash": 3157117262,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      19,
+      69,
+      25,
+      64,
+      24,
+      92,
+      19
+    ],
+    "nameHash": 540529040,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      0,
+      95,
+      27,
+      67,
+      27,
+      89,
+      29
+    ],
+    "nameHash": 2330375624,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      24,
+      81,
+      30,
+      93,
+      3,
+      85,
+      0
+    ],
+    "nameHash": 2708352068,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      3769768196
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      7,
+      69,
+      12,
+      71,
+      5,
+      89,
+      29
+    ],
+    "nameHash": 2369113332,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      29,
+      95,
+      25,
+      67,
+      18,
+      91,
+      29
+    ],
+    "nameHash": 455021024,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      10,
+      67,
+      7,
+      92,
+      23
+    ],
+    "nameHash": 749706853,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      22,
+      89,
+      15,
+      92,
+      2,
+      87,
+      26
+    ],
+    "nameHash": 2181125395,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      6,
+      95,
+      7,
+      81,
+      18,
+      81,
+      6
+    ],
+    "nameHash": 1956957410,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      28,
+      69,
+      8,
+      82,
+      5,
+      89,
+      29
+    ],
+    "nameHash": 3313101112,
+    "regionHash": 1743463326,
+    "championHashes": [
+      782861478,
+      3769768196,
+      426952831,
+      1069056051
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      29,
+      69,
+      25,
+      88,
+      5,
+      95,
+      5
+    ],
+    "nameHash": 1865738360,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196,
+      782861478
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      6,
+      85,
+      5,
+      92,
+      25,
+      81,
+      6
+    ],
+    "nameHash": 2136455394,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      6,
+      95,
+      7,
+      71,
+      24,
+      66,
+      16
+    ],
+    "nameHash": 1995631279,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      27,
+      81,
+      15,
+      82,
+      21,
+      66,
+      19
+    ],
+    "nameHash": 963262669,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      1069056051,
+      3769768196
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      28,
+      95,
+      30,
+      87,
+      5,
+      85,
+      22
+    ],
+    "nameHash": 2308250836,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      17,
+      66,
+      2,
+      82,
+      19,
+      95,
+      1
+    ],
+    "nameHash": 1331740982,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      7,
+      85,
+      10,
+      69,
+      30,
+      92,
+      23
+    ],
+    "nameHash": 352586398,
+    "regionHash": 1743463326,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      28,
+      89,
+      31,
+      68,
+      30,
+      83,
+      25
+    ],
+    "nameHash": 352795764,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478,
+      775540579,
+      4140001726,
+      1985801492
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      20,
+      89,
+      10,
+      93,
+      20,
+      89,
+      23
+    ],
+    "nameHash": 1293523536,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      3,
+      83,
+      25,
+      82,
+      17,
+      68,
+      11
+    ],
+    "nameHash": 2749712239,
+    "regionHash": 3157117262,
+    "championHashes": [
+      775540579,
+      4140001726,
+      782861478
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      29,
+      89,
+      7,
+      92,
+      3,
+      89,
+      17
+    ],
+    "nameHash": 3145741562,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      83,
+      25,
+      82,
+      16,
+      87,
+      11
+    ],
+    "nameHash": 315071503,
+    "regionHash": 3157117262,
+    "championHashes": [
+      775540579,
+      4140001726,
+      782861478,
+      426952831
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      19,
+      66,
+      30,
+      64,
+      3,
+      92,
+      23
+    ],
+    "nameHash": 4001185651,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      4,
+      81,
+      15,
+      81,
+      2,
+      92,
+      16
+    ],
+    "nameHash": 2600621813,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      21,
+      72,
+      27,
+      95,
+      24,
+      69,
+      22
+    ],
+    "nameHash": 2785011936,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      24,
+      81,
+      31,
+      71,
+      5,
+      85,
+      31
+    ],
+    "nameHash": 2964050598,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      3,
+      69,
+      2,
+      80,
+      2,
+      94,
+      23
+    ],
+    "nameHash": 784858269,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      7,
+      89,
+      12,
+      95,
+      18,
+      68,
+      6
+    ],
+    "nameHash": 895889385,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      24,
+      81,
+      27,
+      67,
+      30,
+      94,
+      11
+    ],
+    "nameHash": 2828161292,
+    "regionHash": 1743463326,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      68,
+      10,
+      65,
+      26,
+      89,
+      23
+    ],
+    "nameHash": 997415942,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      1985801492
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      89,
+      7,
+      80,
+      24,
+      95,
+      28
+    ],
+    "nameHash": 849162372,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      18,
+      85,
+      10,
+      65,
+      3,
+      89,
+      17
+    ],
+    "nameHash": 1518891909,
+    "regionHash": 3157117262,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      20,
+      69,
+      12,
+      71,
+      5,
+      89,
+      29
+    ],
+    "nameHash": 1136412285,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      6,
+      89,
+      8,
+      71,
+      30,
+      94,
+      27
+    ],
+    "nameHash": 3493658511,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      0,
+      85,
+      31,
+      90,
+      27,
+      89,
+      30
+    ],
+    "nameHash": 3896251374,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      7,
+      81,
+      2,
+      95,
+      24,
+      66,
+      22
+    ],
+    "nameHash": 2679805731,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      17,
+      93,
+      9,
+      90,
+      7,
+      95,
+      31
+    ],
+    "nameHash": 2679067094,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      4,
+      95,
+      25,
+      88,
+      24,
+      81,
+      30
+    ],
+    "nameHash": 1980139553,
+    "regionHash": 984820783,
+    "championHashes": [
+      775540579,
+      1985801492,
+      426952831
+    ],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      24,
+      81,
+      31,
+      86,
+      25,
+      94,
+      19
+    ],
+    "nameHash": 3153016868,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      7,
+      88,
+      2,
+      64,
+      26,
+      69,
+      0
+    ],
+    "nameHash": 1611690722,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      28,
+      85,
+      10,
+      85,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 687806905,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      19,
+      88,
+      14,
+      68,
+      3,
+      92,
+      23
+    ],
+    "nameHash": 1241109453,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      9,
+      69,
+      5,
+      84,
+      24,
+      95,
+      1
+    ],
+    "nameHash": 1709516255,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      31,
+      91,
+      2,
+      87,
+      24,
+      87,
+      27
+    ],
+    "nameHash": 487111835,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      20,
+      66,
+      2,
+      95,
+      21,
+      69,
+      0
+    ],
+    "nameHash": 3917462603,
+    "regionHash": 3157117262,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      24,
+      85,
+      25,
+      87,
+      30,
+      85,
+      0
+    ],
+    "nameHash": 3091650592,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      28,
+      81,
+      5,
+      71,
+      2,
+      66,
+      28
+    ],
+    "nameHash": 1441375871,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      85,
+      29,
+      90,
+      7,
+      85,
+      0
+    ],
+    "nameHash": 3886861671,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "poison"
+  },
+  {
+    "encodedName": [
+      19,
+      66,
+      10,
+      87,
+      30,
+      92,
+      11
+    ],
+    "nameHash": 3688048675,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      18,
+      66,
+      10,
+      90,
+      15,
+      85,
+      28
+    ],
+    "nameHash": 801929754,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      18,
+      92,
+      2,
+      71,
+      13,
+      92,
+      23
+    ],
+    "nameHash": 2863127847,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      19,
+      95,
+      24,
+      94,
+      24,
+      85,
+      31
+    ],
+    "nameHash": 1213580378,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      23,
+      95,
+      7,
+      87,
+      18,
+      85,
+      28
+    ],
+    "nameHash": 1776472145,
+    "regionHash": 1842540828,
+    "championHashes": [
+      775540579
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      23,
+      66,
+      30,
+      94,
+      7,
+      89,
+      21
+    ],
+    "nameHash": 505253806,
+    "regionHash": 984820783,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      29,
+      95,
+      7,
+      71,
+      5,
+      85,
+      1
+    ],
+    "nameHash": 450101697,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      5,
+      71,
+      30,
+      94,
+      23
+    ],
+    "nameHash": 1364886021,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      66,
+      4,
+      67,
+      30,
+      69,
+      1
+    ],
+    "nameHash": 76086375,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      31,
+      87,
+      14,
+      65,
+      7,
+      95,
+      28
+    ],
+    "nameHash": 523071553,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      27,
+      81,
+      25,
+      71,
+      22,
+      94,
+      19
+    ],
+    "nameHash": 2138291135,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      29,
+      85,
+      31,
+      82,
+      7,
+      95,
+      22
+    ],
+    "nameHash": 1775891203,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      18,
+      92,
+      2,
+      67,
+      21,
+      69,
+      21
+    ],
+    "nameHash": 375739544,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      18,
+      66,
+      4,
+      93,
+      13,
+      95,
+      0
+    ],
+    "nameHash": 2171169683,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051,
+      782861478,
+      3769768196
+    ],
+    "type": "steel"
+  },
+  {
+    "encodedName": [
+      18,
+      92,
+      2,
+      64,
+      4,
+      85,
+      11
+    ],
+    "nameHash": 4258195342,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      19,
+      85,
+      31,
+      90,
+      3,
+      81,
+      28
+    ],
+    "nameHash": 253907529,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      19,
+      81,
+      7,
+      74,
+      5,
+      85,
+      10
+    ],
+    "nameHash": 427148869,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      20,
+      85,
+      28,
+      84,
+      24,
+      94,
+      21
+    ],
+    "nameHash": 3480753490,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      3,
+      85,
+      25,
+      69,
+      30,
+      94,
+      23
+    ],
+    "nameHash": 2063330701,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      28,
+      81,
+      6,
+      67,
+      18,
+      94,
+      6
+    ],
+    "nameHash": 1349213720,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478,
+      775540579,
+      4140001726,
+      1985801492
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      22,
+      81,
+      7,
+      90,
+      25,
+      91,
+      1
+    ],
+    "nameHash": 2765654289,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      24,
+      81,
+      19,
+      92,
+      5,
+      69,
+      1
+    ],
+    "nameHash": 2231689203,
+    "regionHash": 3157117262,
+    "championHashes": [
+      3769768196,
+      782861478,
+      775540579,
+      4140001726
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      22,
+      89,
+      5,
+      90,
+      13,
+      85,
+      28
+    ],
+    "nameHash": 539393502,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      0,
+      89,
+      15,
+      84,
+      18,
+      95,
+      6
+    ],
+    "nameHash": 3595589573,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      29,
+      69,
+      15,
+      81,
+      5,
+      81,
+      11
+    ],
+    "nameHash": 1299172035,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      23,
+      66,
+      4,
+      70,
+      19,
+      95,
+      28
+    ],
+    "nameHash": 1117497753,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      31,
+      93,
+      10,
+      93,
+      14,
+      68,
+      23
+    ],
+    "nameHash": 152826110,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      22,
+      66,
+      4,
+      82,
+      28,
+      89,
+      23
+    ],
+    "nameHash": 4277642768,
+    "regionHash": 2290643985,
+    "championHashes": [
+      426952831
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      20,
+      66,
+      14,
+      87,
+      25,
+      81,
+      5
+    ],
+    "nameHash": 4294747752,
+    "regionHash": 1232523428,
+    "championHashes": [
+      775540579
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      69,
+      25,
+      71,
+      0,
+      89,
+      21
+    ],
+    "nameHash": 233294893,
+    "regionHash": 1743463326,
+    "championHashes": [
+      426952831
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      7,
+      89,
+      5,
+      84,
+      2,
+      92,
+      30
+    ],
+    "nameHash": 1542226749,
+    "regionHash": 984820783,
+    "championHashes": [
+      775540579
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      27,
+      92,
+      14,
+      82,
+      1,
+      95,
+      0
+    ],
+    "nameHash": 3361667107,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      23,
+      92,
+      10,
+      94,
+      18,
+      95,
+      5
+    ],
+    "nameHash": 2414818181,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      0,
+      81,
+      5,
+      64,
+      18,
+      81,
+      0
+    ],
+    "nameHash": 3112064011,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      2,
+      85,
+      3,
+      66,
+      11
+    ],
+    "nameHash": 3761641122,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726,
+      775540579
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      20,
+      81,
+      25,
+      88,
+      5,
+      81,
+      27
+    ],
+    "nameHash": 4175642927,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      18,
+      81,
+      18,
+      95,
+      18,
+      85,
+      20
+    ],
+    "nameHash": 3843592223,
+    "regionHash": 727830303,
+    "championHashes": [
+      426952831
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      23,
+      66,
+      4,
+      69,
+      14,
+      92,
+      23
+    ],
+    "nameHash": 3228436687,
+    "regionHash": 984820783,
+    "championHashes": [
+      426952831
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      30,
+      95,
+      8,
+      71,
+      24,
+      71,
+      30
+    ],
+    "nameHash": 1185795405,
+    "regionHash": 727830303,
+    "championHashes": [
+      426952831
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      5,
+      71,
+      14,
+      91,
+      23
+    ],
+    "nameHash": 1250023764,
+    "regionHash": 1743463326,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      20,
+      95,
+      5,
+      67,
+      31,
+      81,
+      28
+    ],
+    "nameHash": 456755329,
+    "regionHash": 727830303,
+    "championHashes": [
+      426952831
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      29,
+      81,
+      8,
+      91,
+      22,
+      93,
+      2
+    ],
+    "nameHash": 1662830206,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831,
+      782861478,
+      3769768196
+    ],
+    "type": "fighting"
+  },
+  {
+    "encodedName": [
+      19,
+      81,
+      24,
+      80,
+      24,
+      95,
+      28
+    ],
+    "nameHash": 3393638577,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      30,
+      67,
+      7,
+      85,
+      6
+    ],
+    "nameHash": 2604349248,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      0,
+      69,
+      27,
+      90,
+      3,
+      81,
+      0
+    ],
+    "nameHash": 3862980736,
+    "regionHash": 727830303,
+    "championHashes": [
+      3769768196,
+      782861478,
+      775540579
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      2,
+      88,
+      18,
+      91,
+      24,
+      66,
+      28
+    ],
+    "nameHash": 326487679,
+    "regionHash": 1842540828,
+    "championHashes": [
+      1069056051,
+      3769768196,
+      426952831,
+      775540579
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      2,
+      81,
+      31,
+      71,
+      22,
+      68,
+      19
+    ],
+    "nameHash": 1308459568,
+    "regionHash": 1842540828,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      19,
+      95,
+      25,
+      64,
+      24,
+      92,
+      19
+    ],
+    "nameHash": 2987821218,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      28,
+      89,
+      14,
+      67,
+      22,
+      66,
+      22
+    ],
+    "nameHash": 2282044448,
+    "regionHash": 3157117262,
+    "championHashes": [
+      775540579
+    ],
+    "type": "dark"
+  },
+  {
+    "encodedName": [
+      1,
+      69,
+      2,
+      95,
+      22,
+      70,
+      19
+    ],
+    "nameHash": 3439375776,
+    "regionHash": 727830303,
+    "championHashes": [
+      426952831
+    ],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      7,
+      81,
+      7,
+      65,
+      18,
+      89,
+      28
+    ],
+    "nameHash": 2241601845,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "ice"
+  },
+  {
+    "encodedName": [
+      18,
+      66,
+      14,
+      95,
+      24,
+      95,
+      31
+    ],
+    "nameHash": 1096374629,
+    "regionHash": 984820783,
+    "championHashes": [
+      782861478
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      24,
+      85,
+      10,
+      71,
+      5,
+      81,
+      28
+    ],
+    "nameHash": 3554191336,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      18,
+      66,
+      2,
+      92,
+      25,
+      94,
+      23
+    ],
+    "nameHash": 856824836,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      30,
+      69,
+      17,
+      95,
+      18,
+      81,
+      20
+    ],
+    "nameHash": 2325290006,
+    "regionHash": 984820783,
+    "championHashes": [
+      775540579,
+      4140001726
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      2,
+      71,
+      3,
+      92,
+      23
+    ],
+    "nameHash": 3047693517,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      2,
+      69,
+      13,
+      85,
+      27,
+      85,
+      6
+    ],
+    "nameHash": 1284062241,
+    "regionHash": 3157117262,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      29,
+      85,
+      24,
+      67,
+      5,
+      89,
+      6
+    ],
+    "nameHash": 1179812415,
+    "regionHash": 1743463326,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      23,
+      95,
+      31,
+      91,
+      30,
+      68,
+      19
+    ],
+    "nameHash": 3780510169,
+    "regionHash": 3157117262,
+    "championHashes": [
+      782861478
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      4,
+      65,
+      16,
+      85,
+      1
+    ],
+    "nameHash": 4105456947,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      30,
+      89,
+      5,
+      80,
+      22,
+      84,
+      19
+    ],
+    "nameHash": 206205189,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      3,
+      71,
+      4,
+      92,
+      21,
+      81,
+      6
+    ],
+    "nameHash": 3672917392,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      22,
+      69,
+      14,
+      80,
+      24,
+      83,
+      29
+    ],
+    "nameHash": 4230976223,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "fire"
+  },
+  {
+    "encodedName": [
+      23,
+      92,
+      2,
+      64,
+      20,
+      95,
+      0
+    ],
+    "nameHash": 1767644450,
+    "regionHash": 1743463326,
+    "championHashes": [
+      426952831,
+      1069056051
+    ],
+    "type": "ground"
+  },
+  {
+    "encodedName": [
+      29,
+      89,
+      7,
+      71,
+      22,
+      94,
+      25
+    ],
+    "nameHash": 1823039553,
+    "regionHash": 727830303,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      88,
+      14,
+      95,
+      26,
+      85,
+      6
+    ],
+    "nameHash": 133072703,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      20,
+      69,
+      24,
+      88,
+      2,
+      92,
+      30
+    ],
+    "nameHash": 1106272839,
+    "regionHash": 984820783,
+    "championHashes": [
+      4140001726,
+      775540579
+    ],
+    "type": "ghost"
+  },
+  {
+    "encodedName": [
+      20,
+      85,
+      15,
+      86,
+      25,
+      94,
+      23
+    ],
+    "nameHash": 399459208,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "electric"
+  },
+  {
+    "encodedName": [
+      3,
+      71,
+      2,
+      65,
+      27,
+      89,
+      10
+    ],
+    "nameHash": 3472626557,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      23,
+      81,
+      7,
+      95,
+      22,
+      84,
+      23
+    ],
+    "nameHash": 1022658247,
+    "regionHash": 1743463326,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      20,
+      66,
+      4,
+      68,
+      13,
+      85,
+      23
+    ],
+    "nameHash": 1242889635,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "psychic"
+  },
+  {
+    "encodedName": [
+      7,
+      69,
+      25,
+      94,
+      7,
+      92,
+      23
+    ],
+    "nameHash": 3696500959,
+    "regionHash": 984820783,
+    "championHashes": [
+      1069056051
+    ],
+    "type": "bug"
+  },
+  {
+    "encodedName": [
+      19,
+      88,
+      14,
+      65,
+      5,
+      89,
+      31
+    ],
+    "nameHash": 2711865631,
+    "regionHash": 1743463326,
+    "championHashes": [
+      775540579
+    ],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      3,
+      73,
+      7,
+      69,
+      18,
+      95,
+      28
+    ],
+    "nameHash": 3845029627,
+    "regionHash": 2290643985,
+    "championHashes": [],
+    "type": "fairy"
+  },
+  {
+    "encodedName": [
+      3,
+      91,
+      28,
+      92,
+      1,
+      85,
+      6
+    ],
+    "nameHash": 2358060268,
+    "regionHash": 1232523428,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      7,
+      81,
+      31,
+      80,
+      31,
+      95,
+      21
+    ],
+    "nameHash": 2564537862,
+    "regionHash": 3157117262,
+    "championHashes": [],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      19,
+      88,
+      10,
+      93,
+      4,
+      85,
+      11
+    ],
+    "nameHash": 1107968376,
+    "regionHash": 1842540828,
+    "championHashes": [
+      3769768196
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      19,
+      81,
+      25,
+      81,
+      30,
+      94,
+      25
+    ],
+    "nameHash": 2767529987,
+    "regionHash": 2290643985,
+    "championHashes": [
+      4140001726
+    ],
+    "type": "rock"
+  },
+  {
+    "encodedName": [
+      22,
+      92,
+      10,
+      94,
+      30,
+      87,
+      29
+    ],
+    "nameHash": 1909049442,
+    "regionHash": 4084664524,
+    "championHashes": [],
+    "type": "flying"
+  },
+  {
+    "encodedName": [
+      3,
+      68,
+      14,
+      86,
+      25,
+      85,
+      23
+    ],
+    "nameHash": 3615585320,
+    "regionHash": 3801595142,
+    "championHashes": [],
+    "type": "grass"
+  },
+  {
+    "encodedName": [
+      27,
+      89,
+      5,
+      84,
+      27,
+      85,
+      0
+    ],
+    "nameHash": 1356080505,
+    "regionHash": 1842540828,
+    "championHashes": [
+      426952831
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      4,
+      73,
+      6,
+      67,
+      24,
+      92,
+      23
+    ],
+    "nameHash": 3769414047,
+    "regionHash": 3157117262,
+    "championHashes": [
+      775540579,
+      426952831
+    ],
+    "type": "water"
+  },
+  {
+    "encodedName": [
+      17,
+      92,
+      31,
+      82,
+      5,
+      89,
+      19
+    ],
+    "nameHash": 3406306473,
+    "regionHash": 984820783,
+    "championHashes": [
+      3769768196,
+      1985801492,
+      4140001726
+    ],
+    "type": "dragon"
+  },
+  {
+    "encodedName": [
+      4,
+      81,
+      2,
+      95,
+      27,
+      95,
+      5
+    ],
+    "nameHash": 2410849811,
+    "regionHash": 984820783,
+    "championHashes": [
+      426952831
+    ],
+    "type": "normal"
+  },
+  {
+    "encodedName": [
+      3,
+      95,
+      7,
+      65,
+      24,
+      83,
+      25
+    ],
+    "nameHash": 243583288,
+    "regionHash": 984820783,
+    "championHashes": [],
+    "type": "rock"
+  }
+];

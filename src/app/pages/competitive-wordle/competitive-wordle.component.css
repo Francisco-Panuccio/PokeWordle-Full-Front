@@ -1,0 +1,172 @@
+/*Logged In - Regional*/
+.div_main_regional {
+  margin: 50px auto 30px auto;
+}
+
+.h1_regional {
+  font-size: 70px;
+  border-bottom: 10px double var(--primary-color);
+  font-family: 'PixelCraft Bold', sans-serif;
+  margin: -35px 0 35px 0;
+  padding: 0 73px 10px 73px;
+}
+
+.div_game_over {
+  background-color: var(--diploma);
+  width: 500px;
+  height: 500px;
+  margin: 120px auto;
+}
+
+.p_defeat,
+.p_victory {
+  font-size: 20px;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  font-family: 'PixelCraft Bold', sans-serif;
+  border: 5px dashed var(--primary-color);
+  padding: 5px 10px;
+  margin: 40px auto 0 auto;
+}
+
+.p_victory {
+  padding: 5px 10px;
+  margin: 40px auto 30px auto;
+  text-align: center;
+}
+
+.span_game_over {
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+}
+
+br {
+  display: none;
+}
+
+.img_defeat,
+.img_victory {
+  margin: 0 0 20px 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+.img_defeat {
+  width: 300px !important;
+  height: 250px !important;
+}
+
+.img_victory {
+  width: 200px;
+  height: 200px;
+}
+
+/* Media Queries */
+/* Pantallas Menores a 650px */
+@media (max-width: 650px) {
+  .h1_regional {
+    font-size: 50px;
+    margin: -20px 0 35px 0;
+    padding: 0 129px 10px 129px;
+  }
+}
+
+/* Pantallas Menores a 600px */
+@media (max-width: 600px) {
+  .div_main_regional {
+    padding-bottom: 30px;
+    margin-top: 120px;
+  }
+
+  .h1_regional {
+    font-size: 35px;
+    margin: -15px 0 30px 0;
+    padding: 0 115px 10px 115px;
+  }
+
+  .div_game_over {
+    width: 300px;
+    height: 400px;
+    margin: 80px auto;
+  }
+
+  .p_defeat,
+  .p_victory {
+    font-size: 18px;
+    padding: 0 10px 5px 10px;
+  }
+
+  .span_game_over {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  br {
+    display: block;
+  }
+
+  .img_victory,
+  .img_defeat {
+    width: 180px !important;
+    margin: 0 0 20px 0;
+  }
+
+  .img_victory {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .btn_back {
+    font-size: 18px;
+  }
+}
+
+/* Pantallas Menores a 460px */
+@media (max-width: 460px) {
+  .div_main_regional {
+    padding-bottom: 25px;
+    margin-top: 120px;
+  }
+
+  .h1_regional {
+    font-size: 30px;
+    margin: -5px 0 30px 0;
+    padding: 0 55px 10px 55px;
+  }
+}
+
+/* Pantallas Menores a 360px */
+@media (max-width: 360px) {
+  .div_game_over {
+    width: 250px;
+    height: 350px;
+  }
+
+  .p_defeat {
+    font-size: 16px;
+  }
+
+  .p_victory {
+    margin: 50px auto 30px auto;
+  }
+
+  .img_defeat {
+    width: 220px;
+    margin: 0 0 5px 0;
+  }
+
+  .img_victory {
+    width: 150px;
+    height: 150px;
+  }
+
+  .span_game_over {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .btn_back {
+    font-size: 16px;
+  }
+}

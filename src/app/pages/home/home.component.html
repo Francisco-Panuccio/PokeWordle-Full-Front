@@ -1,0 +1,45 @@
+<div class="div_border_main" [class.electricity]="electricEffect">
+    <div class="div_main" [class.electricity]="electricEffect">
+        <div class="div_border_container">
+            <div class="div_container">
+                <div class="div_border_left_band">
+                    <div class="div_left_band">
+                        <div class="div_pkball" [class.rotate]="electricEffect">
+                            <div class="div_left_line_pkball"></div>
+                            <div class="div_pkball_center"></div>
+                            <div class="div_right_line_pkball"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div_decorations">
+                    <div class="div_decoration">
+                        <button class="btn_decoration"></button>
+                    </div>
+                    <div class="div_decoration">
+                        <button class="btn_decoration"></button>
+                    </div>
+                </div>
+                <div class="div_screen" [class.electricity]="electricEffect">
+                    <div class="div_screen_int" [class.electricity]="electricEffect">
+                        <div class="div_opts">
+                            @for(option of options; track option; let i = $index) {
+                                <p class="p_opt" (mouseover)="setRandomColor(i)" (mouseleave)="hoveredColors[i] = ''" (click)="goTo(option.route)" [style.color]="hoveredColors[i]">{{option.name}}</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="div_right_band">
+                    <button class="btn_green btn_green_one" (click)="play(0)" [disabled]="electricEffect" [class.electricity]="electricEffect"></button>
+                    <button class="btn_green btn_green_two" (click)="play(1)" [disabled]="electricEffect" [class.electricity]="electricEffect"></button>
+                </div>
+                <div class="div_little_btn_green" (click)="rotomAnimation()"></div>
+                <div class="div_lines">
+                    <div class="div_line"></div>
+                    <div class="div_line"></div>
+                    <div class="div_line"></div>
+                    <div class="div_line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

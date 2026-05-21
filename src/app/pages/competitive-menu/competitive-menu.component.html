@@ -1,0 +1,54 @@
+@if(loading) { <app-loading/> } 
+@else {
+    <div class="div_main_logged">
+        <div class="div_division division_one">
+            @if(username) {
+                <button class="btn_leaderboard" (click)="copyCode()">Save Progress</button>
+            }
+            <button class="btn_logout" (click)="goBack()">Back</button>
+        </div>
+
+        <h1 class="h1_logged">PokeWordle</h1>
+
+        <div class="div_data">
+            <div class="div_division division_two">
+                @if(!username) {
+                    <label class="label_input">Username</label>
+                    <input [(ngModel)]="usernameInput" class="txt_input" maxlength="12" placeholder="Enter your username" pattern="[A-Za-z0-9ñÑ]{3,12}" title="3-12 characters, letters, numbers, or ñ only" />
+                    <button class="btn_copy" (click)="saveUsername()">Save Username</button>
+                } @else {
+                    <span [appCertificate]="certificate">{{username | titlecase}}</span>
+                    <span [appCertificate]="certificate">Score: {{score}}</span>
+                }
+            </div>
+        </div>
+
+        @if(showLoadCode) {
+            <div class="div_import">
+                <h2 class="h2_logged">{{ username ? 'Paste a code to restore progress' : 'Paste a code to load progress' }}</h2>
+                <div class="div_import_section">
+                    <textarea [(ngModel)]="inputCode" spellcheck="false" placeholder="Paste your progress code"></textarea>
+                    <button class="btn_load" (click)="loadCode()">Load Code</button>
+                    <p class="p_status">{{statusMessage}}</p>
+                </div>
+            </div>
+        }
+
+        @if(username) {
+            <div class="div_menu">
+                @for(region of regions; track region) {
+                    <span class="span_section">{{region | titlecase}}</span>
+                    <div class="div_section" (click)="goToRegionalWordle(region)">
+                        <img [src]="'/images/regions/'+region+'.png'" [alt]="region" [appBackgroundRegions]="region">
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="div_title_rules" (click)="revealRules()">
+        <h2>Rules</h2>
+    </div>
+
+    @if(showRules) { <app-rules/> }
+}
