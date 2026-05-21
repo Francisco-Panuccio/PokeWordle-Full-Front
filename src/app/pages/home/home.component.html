@@ -45,3 +45,8 @@
     </div>
 </div>
 @if(showRules) { <app-rules (closed)="showRules = false"/> }
+@if(showRotomGif) {
+    <div class="div_rotom_overlay" (click)="closeRotomGif()">
+        <img [src]="rotomGif" alt="rotom" class="img_rotom_secret">
+    </div>
+}

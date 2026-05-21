@@ -44,6 +44,9 @@ export const championsImages: string[] = [
     "images/champions/ash.png"
 ];
 
+//Gifs
+export const rotomGif: string = "gifs/rotom.gif";
+
 //Sounds
 export const audiosPokedex: string[] = [
     "sounds/btn_green_one.mp3",

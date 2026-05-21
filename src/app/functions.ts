@@ -5,10 +5,27 @@ const AUDIO_CACHE = new Map<string, HTMLAudioElement>();
 function toAbs(url: string): string {
   if (!url) return "";
   try {
-    return new URL(url, document.baseURI).toString();
+    const base = typeof document !== "undefined" ? document.baseURI : undefined;
+    return new URL(url, base).toString();
   } catch {
     return url;
   }
+}
+
+function readSessionArray(key: string): string[] {
+  try {
+    const value = sessionStorage.getItem(key);
+    const parsed = value ? JSON.parse(value) : [];
+    return Array.isArray(parsed) ? parsed.filter((item): item is string => typeof item === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeSessionArray(key: string, value: string[]) {
+  try {
+    sessionStorage.setItem(key, JSON.stringify(value));
+  } catch { }
 }
 
 //Images
@@ -17,7 +34,7 @@ export function preloadImagesOnce(imageUrls: string[], timeout = 10000): Promise
   if (!abs.length) return Promise.resolve();
 
   const key = `imgPreloaded:${IMG_PRELOAD_VERSION}:${abs.slice().sort().join("|")}`;
-  const loaded: string[] = JSON.parse(sessionStorage.getItem(key) || "[]");
+  const loaded = readSessionArray(key);
   const remaining = abs.filter(u => !loaded.includes(u));
   if (!remaining.length) return Promise.resolve();
 
@@ -25,21 +42,22 @@ export function preloadImagesOnce(imageUrls: string[], timeout = 10000): Promise
     new Promise(resolve => {
       const img = new Image();
       let done = false;
+      const timer = window.setTimeout(() => finish(false), timeout);
       const finish = (ok: boolean) => {
         if (done) return;
         done = true;
+        window.clearTimeout(timer);
         ok ? resolve(src) : resolve(null);
       };
       img.onload = () => finish(true);
       img.onerror = () => finish(false);
       img.src = src;
-      setTimeout(() => finish(false), timeout);
     });
 
   return Promise.all(remaining.map(loadOne)).then(results => {
     const success = results.filter((u): u is string => !!u);
     if (success.length) {
-      sessionStorage.setItem(key, JSON.stringify([...loaded, ...success]));
+      writeSessionArray(key, [...loaded, ...success]);
     }
   });
 }
@@ -50,7 +68,7 @@ export async function preloadAudiosOnce(audioUrls: string[], timeout = 15000): P
   if (!abs.length) return [];
 
   const key = `audPreloaded:${AUD_PRELOAD_VERSION}:${abs.slice().sort().join("|")}`;
-  const loaded: string[] = JSON.parse(sessionStorage.getItem(key) || "[]");
+  const loaded = readSessionArray(key);
   const remaining = abs.filter(u => !loaded.includes(u));
 
   const loadOne = (src: string) => new Promise<HTMLAudioElement | null>((resolve) => {
@@ -63,9 +81,11 @@ export async function preloadAudiosOnce(audioUrls: string[], timeout = 15000): P
     }
 
     let done = false;
+    const timer = window.setTimeout(() => finish(false), timeout);
     const finish = (ok: boolean) => {
       if (done) return;
       done = true;
+      window.clearTimeout(timer);
       audio!.removeEventListener("canplaythrough", onReady);
       audio!.removeEventListener("loadeddata", onReady);
       audio!.removeEventListener("error", onError);
@@ -79,14 +99,13 @@ export async function preloadAudiosOnce(audioUrls: string[], timeout = 15000): P
     audio.addEventListener("error", onError, { once: true });
 
     try { audio.load(); } catch { }
-    setTimeout(() => finish(false), timeout);
   });
 
   if (remaining.length) {
     const results = await Promise.all(remaining.map(loadOne));
     const success = remaining.filter((_, i) => !!results[i]);
     if (success.length) {
-      sessionStorage.setItem(key, JSON.stringify([...loaded, ...success]));
+      writeSessionArray(key, [...loaded, ...success]);
     }
   }
 

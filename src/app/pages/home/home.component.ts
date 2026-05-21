@@ -1,7 +1,7 @@
 import { Component, HostListener, inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { preloadAudiosOnce, playAudio } from '../../functions';
-import { colorOptions, audiosPokedex } from '../../constants';
+import { preloadAudiosOnce, preloadImagesOnce, playAudio } from '../../functions';
+import { colorOptions, audiosPokedex, rotomGif } from '../../constants';
 import { Router } from '@angular/router';
 import { RulesComponent } from '../rules/rules.component';
 
@@ -15,6 +15,9 @@ import { RulesComponent } from '../rules/rules.component';
 export class HomeComponent implements OnInit, OnDestroy {
   private router = inject(Router);
   private audioUnlocked = false;
+  private secretBuffer = "";
+  private rotomTimeout?: number;
+  readonly rotomGif = rotomGif;
 
   options = [
     { name: "Quick", route: "/play" },
@@ -25,14 +28,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   hoveredColors: string[] = [];
   electricEffect: boolean = false;
   showRules: boolean = false;
+  showRotomGif: boolean = false;
 
   async ngOnInit() {
     this.hoveredColors = new Array(this.options.length).fill("");
+    await preloadImagesOnce([rotomGif]);
     this.audioElements = await preloadAudiosOnce(audiosPokedex);
     this.audioElements.forEach(a => (a.volume = 0.5));
   }
 
   ngOnDestroy() {
+    if (this.rotomTimeout) window.clearTimeout(this.rotomTimeout);
     this.stopAllAudio();
   }
 
@@ -57,6 +63,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  @HostListener('window:keydown', ['$event'])
+  onWindowKeydown(event: KeyboardEvent) {
+    if (!/^\d$/.test(event.key)) return;
+
+    this.secretBuffer = `${this.secretBuffer}${event.key}`.slice(-4);
+    if (this.secretBuffer !== "0479") return;
+
+    this.secretBuffer = "";
+    this.showRotomGif = true;
+    this.rotomAnimation();
+    if (this.rotomTimeout) window.clearTimeout(this.rotomTimeout);
+    this.rotomTimeout = window.setTimeout(() => this.closeRotomGif(), 3000);
+  }
+
   setRandomColor(index: number) {
     const i = Math.floor(Math.random() * colorOptions.length);
     this.hoveredColors[index] = colorOptions[i];
@@ -72,5 +92,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.play(2);
     this.electricEffect = true;
     setTimeout(() => { this.electricEffect = false; }, 2000);
+  }
+
+  closeRotomGif() {
+    this.showRotomGif = false;
+    if (this.rotomTimeout) {
+      window.clearTimeout(this.rotomTimeout);
+      this.rotomTimeout = undefined;
+    }
   }
 }

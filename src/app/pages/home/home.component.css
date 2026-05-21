@@ -49,8 +49,6 @@
   clip-path: polygon(51% 0, 69% 26%, 100% 26%, 100% 57%, 69% 57%, 51% 83%, 0 83%, 0 0);
   background-color: var(--pokedex-bands-color);
   box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
-  -webkit-box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
 }
 
 .div_pkball {
@@ -66,8 +64,6 @@
   background-color: var(--secondary-color);
   margin: 0 0 0 5px;
   box-shadow: 0px 0px 5px 6px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0px 0px 5px 6px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 0px 5px 6px rgba(255, 255, 255, 0.75);
   transition: transform 1s ease-in-out;
 }
 
@@ -88,8 +84,6 @@
   background: var(--pokedex-pkball-color);
   background: radial-gradient(circle, rgba(60, 124, 165, 1) 20%, rgba(131, 205, 225, 1) 45%);
   box-shadow: 0px 0px 5px 6px rgba(255, 255, 255, 0.75) inset;
-  -webkit-box-shadow: 0px 0px 5px 6px rgba(255, 255, 255, 0.75) inset;
-  -moz-box-shadow: 0px 0px 5px 6px rgba(33, 21, 21, 0.75) inset;
 }
 
 .div_right_line_pkball {
@@ -123,6 +117,12 @@
   border: 2px solid var(--primary-color);
   background-color: var(--secondary-color);
   margin-right: -4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.div_decoration:hover .btn_decoration {
+  transform: translateX(-50px);
+  box-shadow: 0 0 8px var(--secondary-color);
 }
 
 .div_screen {
@@ -133,8 +133,6 @@
   border: 6px solid var(--primary-color);
   background-color: var(--pokedex-bands-color);
   box-shadow: 0px 0px 12px 3px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0px 0px 12px 3px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 0px 12px 3px rgba(255, 255, 255, 0.75);
 }
 
 .div_screen_int {
@@ -149,8 +147,6 @@
   margin: 30px auto 70px auto;
   background-color: #D6EEFC;
   box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.75);
 }
 
 .div_opts {
@@ -184,8 +180,6 @@
   margin: 260px -258px 0 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
-  -webkit-box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.3) inset;
 }
 
 .btn_green {
@@ -227,6 +221,32 @@
   border-radius: 20px;
   transform: rotate(-20deg);
   border: 5px solid var(--primary-color);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.div_line:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 5px #00f, 0 0 10px #0ff;
+}
+
+.div_rotom_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.img_rotom_secret {
+  width: min(700px, 80vw);
+  height: auto;
+  image-rendering: auto;
+  filter: drop-shadow(0 0 12px #0ff) drop-shadow(0 0 22px #00f);
+  animation: rotomReveal 0.25s ease-out;
+  margin: 0 0 0 100px;
 }
 
 .electricity {
@@ -258,6 +278,18 @@
 
   100% {
     box-shadow: 0 0 10px #00f, 0 0 20px #0ff;
+  }
+}
+
+@keyframes rotomReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -510,6 +542,10 @@
   .div_border_main {
     width: 505px;
   }
+
+  .img_rotom_secret {
+    margin: 0 0 0 50px;
+  }
 }
 
 /* Pantallas Menores a 550px */
@@ -527,6 +563,10 @@
 
   .div_opts {
     padding: 5px 10px 10px 10px;
+  }
+
+  .img_rotom_secret {
+    margin: 0 0 0 20px;
   }
 }
 
