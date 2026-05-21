@@ -8,7 +8,7 @@
                 <span class="span_game_over">The Pokémon was <br> <span class="span_target_word">{{ targetWordPkmn | titlecase }}</span></span>
             }
 
-            <img [hidden]="!(gameOver && gameWon)" src="/images/victory.jpg" alt="pikachu_victory" class="img_victory">
+            <img [hidden]="!(gameOver && gameWon)" src="images/victory.jpg" alt="pikachu_victory" class="img_victory">
             <img [hidden]="!(gameOver && !gameWon)" [src]="defeatImage" [alt]="defeatImage" class="img_defeat">
 
             <button class="btn_replay" (click)="gameWon ? nextRound() : goToMenu()">{{gameWon ? "Keep Going" : "Try Again"}}</button>

@@ -10,48 +10,48 @@ export const colorOptions: string[] = [
 
 //Images
 export const imagesPlayAll: string[] = [
-    "/images/victory.png",
-    "/images/defeat.png"
+    "images/victory.png",
+    "images/defeat.png"
 ]
 
 export const regionCovers: Record<string, string> = {
-    kanto: "/images/regions/kanto.png",
-    johto: "/images/regions/johto.png",
-    hoenn: "/images/regions/hoenn.png",
-    sinnoh: "/images/regions/sinnoh.png",
-    unova: "/images/regions/unova.png",
-    kalos: "/images/regions/kalos.png",
-    alola: "/images/regions/alola.png",
-    galar: "/images/regions/galar.png",
-    paldea: "/images/regions/paldea.png",
-    tournament: "/images/regions/tournament.png",
+    kanto: "images/regions/kanto.png",
+    johto: "images/regions/johto.png",
+    hoenn: "images/regions/hoenn.png",
+    sinnoh: "images/regions/sinnoh.png",
+    unova: "images/regions/unova.png",
+    kalos: "images/regions/kalos.png",
+    alola: "images/regions/alola.png",
+    galar: "images/regions/galar.png",
+    paldea: "images/regions/paldea.png",
+    tournament: "images/regions/tournament.png",
 };
 
 export const imagesRegional: string[] = [
-    "/images/victory.jpg",
-    "/images/pathetic/defeat1.png",
-    "/images/pathetic/defeat2.png",
-    "/images/pathetic/defeat3.png"
+    "images/victory.jpg",
+    "images/pathetic/defeat1.png",
+    "images/pathetic/defeat2.png",
+    "images/pathetic/defeat3.png"
 ];
 
 export const championsImages: string[] = [
-    "/images/champions/lance.png",
-    "/images/champions/iris.png",
-    "/images/champions/steven.png",
-    "/images/champions/diantha.png",
-    "/images/champions/cynthia.png",
-    "/images/champions/leon.png",
-    "/images/champions/ash.png"
+    "images/champions/lance.png",
+    "images/champions/iris.png",
+    "images/champions/steven.png",
+    "images/champions/diantha.png",
+    "images/champions/cynthia.png",
+    "images/champions/leon.png",
+    "images/champions/ash.png"
 ];
 
 //Sounds
 export const audiosPokedex: string[] = [
-    "/sounds/btn_green_one.mp3",
-    "/sounds/btn_green_two.mp3",
-    "/sounds/rotom_crying.mp3",
+    "sounds/btn_green_one.mp3",
+    "sounds/btn_green_two.mp3",
+    "sounds/rotom_crying.mp3",
 ];
 
-export const tournamentBackground: string[] = ["/sounds/tournament.mp3"];
+export const tournamentBackground: string[] = ["sounds/tournament.mp3"];
 
 //Wordle
 export const wordLength: number = 7;

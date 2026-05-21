@@ -39,7 +39,7 @@
                 @for(region of regions; track region) {
                     <span class="span_section">{{region | titlecase}}</span>
                     <div class="div_section" (click)="goToRegionalWordle(region)">
-                        <img [src]="'/images/regions/'+region+'.png'" [alt]="region" [appBackgroundRegions]="region">
+                        <img [src]="'images/regions/'+region+'.png'" [alt]="region" [appBackgroundRegions]="region">
                     </div>
                 }
             </div>

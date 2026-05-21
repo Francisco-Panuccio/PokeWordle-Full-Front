@@ -5,13 +5,13 @@
             <div class="combat-screen">
                 <div class="champion-box">
                     <span class="champion-name">{{ currentChampionName | titlecase}}</span>
-                    <img [hidden]="currentChampionName !== 'lance'" src="/images/champions/lance.png" alt="lance" class="champion-img"/>
-                    <img [hidden]="currentChampionName !== 'iris'" src="/images/champions/iris.png" alt="iris" class="champion-img-iris"/>
-                    <img [hidden]="currentChampionName !== 'steven'" src="/images/champions/steven.png" alt="steven" class="champion-img champion-img-steven"/>
-                    <img [hidden]="currentChampionName !== 'diantha'" src="/images/champions/diantha.png" alt="diantha" class="champion-img champion-img-diantha"/>
-                    <img [hidden]="currentChampionName !== 'cynthia'" src="/images/champions/cynthia.png" alt="cynthia" class="champion-img champion-img-cynthia"/>
-                    <img [hidden]="currentChampionName !== 'leon'" src="/images/champions/leon.png" alt="leon" class="champion-img-leon"/>
-                    <img [hidden]="currentChampionName !== 'ash'" src="/images/champions/ash.png" alt="ash" class="champion-img champion-img-ash"/>
+                    <img [hidden]="currentChampionName !== 'lance'" src="images/champions/lance.png" alt="lance" class="champion-img"/>
+                    <img [hidden]="currentChampionName !== 'iris'" src="images/champions/iris.png" alt="iris" class="champion-img-iris"/>
+                    <img [hidden]="currentChampionName !== 'steven'" src="images/champions/steven.png" alt="steven" class="champion-img champion-img-steven"/>
+                    <img [hidden]="currentChampionName !== 'diantha'" src="images/champions/diantha.png" alt="diantha" class="champion-img champion-img-diantha"/>
+                    <img [hidden]="currentChampionName !== 'cynthia'" src="images/champions/cynthia.png" alt="cynthia" class="champion-img champion-img-cynthia"/>
+                    <img [hidden]="currentChampionName !== 'leon'" src="images/champions/leon.png" alt="leon" class="champion-img-leon"/>
+                    <img [hidden]="currentChampionName !== 'ash'" src="images/champions/ash.png" alt="ash" class="champion-img champion-img-ash"/>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="div_game_over">
                 <p [class]="gameWon ? 'p_victory' : 'p_defeat'">{{ gameWon ? "Now you are the best, your name will appear in gold on the leaderboard for everyone to see" : "Patethic..." }}</p>
                 
-                <img [hidden]="!(gameOver && gameWon)" src="/images/victory.jpg" alt="pikachu_victory" class="img_victory">
+                <img [hidden]="!(gameOver && gameWon)" src="images/victory.jpg" alt="pikachu_victory" class="img_victory">
                 <img [hidden]="!(gameOver && !gameWon)" [src]="defeatImage" [alt]="defeatImage" class="img_defeat">
 
                 <button (click)="goBack()" class="btn_replay">{{gameWon ? "Pokémon Master" : "Keep Trying"}}</button>
