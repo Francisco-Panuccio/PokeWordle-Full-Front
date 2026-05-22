@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private audioUnlocked = false;
   private secretBuffer = "";
   private rotomTimeout?: number;
+  private rotomCloseTimeout?: number;
   readonly rotomGif = rotomGif;
 
   options = [
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   electricEffect: boolean = false;
   showRules: boolean = false;
   showRotomGif: boolean = false;
+  rotomClosing: boolean = false;
 
   async ngOnInit() {
     this.hoveredColors = new Array(this.options.length).fill("");
@@ -39,6 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if (this.rotomTimeout) window.clearTimeout(this.rotomTimeout);
+    if (this.rotomCloseTimeout) window.clearTimeout(this.rotomCloseTimeout);
     this.stopAllAudio();
   }
 
@@ -72,8 +75,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.secretBuffer = "";
     this.showRotomGif = true;
+    this.rotomClosing = false;
     this.rotomAnimation();
     if (this.rotomTimeout) window.clearTimeout(this.rotomTimeout);
+    if (this.rotomCloseTimeout) window.clearTimeout(this.rotomCloseTimeout);
     this.rotomTimeout = window.setTimeout(() => this.closeRotomGif(), 3000);
   }
 
@@ -95,10 +100,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   closeRotomGif() {
-    this.showRotomGif = false;
+    if (!this.showRotomGif || this.rotomClosing) return;
+
+    this.rotomClosing = true;
     if (this.rotomTimeout) {
       window.clearTimeout(this.rotomTimeout);
       this.rotomTimeout = undefined;
     }
+    this.rotomCloseTimeout = window.setTimeout(() => {
+      this.showRotomGif = false;
+      this.rotomClosing = false;
+      this.rotomCloseTimeout = undefined;
+    }, 120);
   }
 }

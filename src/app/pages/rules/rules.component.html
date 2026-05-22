@@ -36,6 +36,9 @@
 
 @if(secretActive) {
     <div class="div_unown_secret">
+        @if(staticFlickerActive) {
+            <div class="div_static_flicker"></div>
+        }
         @if(showUnownMessage) {
             <div class="div_unown_darkness"></div>
         }

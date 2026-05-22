@@ -69,6 +69,7 @@ export const audiosPokedex: string[] = [
 
 export const tournamentBackground: string[] = ["sounds/tournament.mp3"];
 export const brokenGlassAudio: string[] = ["sounds/broken_glass.mp3"];
+export const unownSecretAudio: string[] = ["sounds/unown_crying.mp3", "sounds/static_unown.mp3"];
 
 //Wordle
 export const wordLength: number = 7;
