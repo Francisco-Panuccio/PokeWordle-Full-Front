@@ -322,17 +322,13 @@ export class PokeApiService {
     return Math.max(0, basePoints - attemptPenalty - hintPenalty);
   }
 
-  async finishGame(won: boolean, gymsPassed: number, attemptsUsed: number = 0, usedHint: boolean = false): Promise<{ regionCompleted: boolean; nextRegion?: string }> {
+  async finishGame(won: boolean, gymsPassed: number, attemptsUsed: number = 0, usedHint: boolean = false, pendingRegionScore: number = 0): Promise<{ regionCompleted: boolean; nextRegion?: string; roundScore: number }> {
     if (!this.game) throw new Error('Game not Initialized');
     this.game.lastRoundWon = won;
-
-    if (won && this.game.region) {
-      const points = this.calculateGymScore(attemptsUsed, usedHint);
-      this.progress.addScore(points);
-    }
+    const roundScore = won && this.game.region ? this.calculateGymScore(attemptsUsed, usedHint) : 0;
 
     if (!this.game.region) {
-      return { regionCompleted: false };
+      return { regionCompleted: false, roundScore };
     }
 
     const currentRegion = this.game.region;
@@ -340,11 +336,15 @@ export class PokeApiService {
     const willComplete = won && gymsPassed + 1 >= requiredWins;
     const nextRegion = willComplete ? this.getNextRegion(currentRegion) : undefined;
 
+    if (willComplete) {
+      this.progress.addScore(pendingRegionScore + roundScore);
+    }
+
     if (willComplete && nextRegion) {
       this.progress.unlockRegion(nextRegion);
     }
 
-    return { regionCompleted: willComplete, nextRegion };
+    return { regionCompleted: willComplete, nextRegion, roundScore };
   }
 
   private getNextRegion(current: string): string | undefined {

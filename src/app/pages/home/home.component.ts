@@ -4,6 +4,8 @@ import { preloadAudiosOnce, preloadImagesOnce, playAudio } from '../../functions
 import { colorOptions, audiosPokedex, rotomGif } from '../../constants';
 import { Router } from '@angular/router';
 import { RulesComponent } from '../rules/rules.component';
+import { PreloadService } from '../../services/preload.service';
+import { ProgressService } from '../../services/progress.service';
 
 @Component({
   standalone: true,
@@ -14,6 +16,8 @@ import { RulesComponent } from '../rules/rules.component';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private router = inject(Router);
+  private preload = inject(PreloadService);
+  private progress = inject(ProgressService);
   private audioUnlocked = false;
   private secretBuffer = "";
   private rotomTimeout?: number;
@@ -34,9 +38,19 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     this.hoveredColors = new Array(this.options.length).fill("");
+    this.preloadCompetitiveInBackground();
     await preloadImagesOnce([rotomGif]);
     this.audioElements = await preloadAudiosOnce(audiosPokedex);
     this.audioElements.forEach(a => (a.volume = 0.5));
+  }
+
+  private preloadCompetitiveInBackground() {
+    const state = this.progress.load();
+    if (!state.username) return;
+    void this.preload.preloadCompetitive(state.regions);
+    if (state.regions.includes('tournament')) {
+      void this.preload.preloadTournament();
+    }
   }
 
   ngOnDestroy() {

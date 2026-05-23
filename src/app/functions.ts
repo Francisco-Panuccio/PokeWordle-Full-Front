@@ -33,7 +33,7 @@ export function preloadImagesOnce(imageUrls: string[], timeout = 10000): Promise
   const abs = [...new Set(imageUrls.map(toAbs).filter(Boolean))];
   if (!abs.length) return Promise.resolve();
 
-  const key = `imgPreloaded:${IMG_PRELOAD_VERSION}:${abs.slice().sort().join("|")}`;
+  const key = `imgPreloaded:${IMG_PRELOAD_VERSION}`;
   const loaded = readSessionArray(key);
   const remaining = abs.filter(u => !loaded.includes(u));
   if (!remaining.length) return Promise.resolve();
@@ -57,7 +57,7 @@ export function preloadImagesOnce(imageUrls: string[], timeout = 10000): Promise
   return Promise.all(remaining.map(loadOne)).then(results => {
     const success = results.filter((u): u is string => !!u);
     if (success.length) {
-      writeSessionArray(key, [...loaded, ...success]);
+      writeSessionArray(key, [...new Set([...loaded, ...success])]);
     }
   });
 }

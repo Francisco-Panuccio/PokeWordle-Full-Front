@@ -11,7 +11,7 @@ export class PreloadService {
   }
 
   preloadCompetitive(regions: string[]) {
-    const covers = regions.map(r => constant.regionCovers[r.toLowerCase()]).filter(Boolean) as string[];
+    const covers = Object.values(constant.regionCovers);
     return preloadImagesOnce([...constant.imagesRegional, ...covers]);
   }
 

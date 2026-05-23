@@ -10,6 +10,7 @@ import { PkmnTypeDirective } from '../../directives/pkmn-type.directive';
 import { ValidPokemonResult } from '../../interfaces/valid-pokemon-result';
 import * as constant from '../../constants';
 import * as funct from '../../functions';
+import { PreloadService } from '../../services/preload.service';
 
 @Component({
   standalone: true,
@@ -23,9 +24,11 @@ export class CompetitiveWordleComponent implements OnInit, AfterViewInit, OnDest
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private renderer = inject(Renderer2);
+  private preload = inject(PreloadService);
   private sub?: any;
-  private finishInfo: { regionCompleted: boolean; nextRegion?: string } | null = null;
+  private finishInfo: { regionCompleted: boolean; nextRegion?: string; roundScore: number } | null = null;
   private roundFinished = false;
+  private regionRunScore = 0;
 
   @ViewChildren("letterInput") letterInputs!: QueryList<ElementRef>;
 
@@ -255,7 +258,7 @@ export class CompetitiveWordleComponent implements OnInit, AfterViewInit, OnDest
     if (this.roundFinished) return;
     this.roundFinished = true;
     try {
-      this.finishInfo = await this.pkService.finishGame(won, this.gymsPassed, this.currentAttempt, this.usedHint);
+      this.finishInfo = await this.pkService.finishGame(won, this.gymsPassed, this.currentAttempt, this.usedHint, this.regionRunScore);
     } catch (e: any) {
       console.error("Finish Game Failed", e);
     }
@@ -269,11 +272,14 @@ export class CompetitiveWordleComponent implements OnInit, AfterViewInit, OnDest
     this.showGameOver = false;
 
     if (info?.regionCompleted) {
+      this.regionRunScore = 0;
+      await this.preload.preloadCompetitive([]);
       await this.router.navigateByUrl("/progress");
       return;
     }
 
     this.resetAttempts();
+    if (this.gameWon) this.regionRunScore += info?.roundScore ?? 0;
     this.gymsPassed = this.gameWon ? this.gymsPassed + 1 : 0;
     this.gameWon = false;
     await this.startRegionalRound();

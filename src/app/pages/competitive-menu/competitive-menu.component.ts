@@ -39,6 +39,7 @@ export class CompetitiveMenuComponent implements OnDestroy {
     this.renderer.addClass(document.body, 'top-aligned-page');
     this.refreshState();
     this.loading = false;
+    void this.preloadRegionsIfReady();
   }
 
   ngOnDestroy() {
