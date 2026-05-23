@@ -6,7 +6,7 @@
   overflow: hidden;
   width: 400px;
   height: 400px;
-  margin: 230px auto 0 auto;
+  margin: 0 auto;
   animation: rotate360 3s infinite;
 }
 
@@ -106,7 +106,7 @@
 /* Pantallas Menores a 750px */
 @media (max-width: 750px) {
   .div_main_loading {
-    margin: 250px auto 0 auto;
+    margin: 0 auto;
     width: 300px;
     height: 300px;
   }
@@ -149,7 +149,7 @@
 
 @media (max-width: 450px) {
   .div_main_loading {
-    margin: 300px auto 0 auto;
+    margin: 0 auto;
     width: 250px;
     height: 250px;
   }
